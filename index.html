@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="National bulk transport, quarry material supply and major project fleet solutions delivered safely and reliably across Australia." name="description"/>
+<title>Bulk Transport &amp; Material Supply Australia | Cartage Australia</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --navy:#07182c; --blue:#123a68; --red:#e32636; --white:#fff;
+      --mist:#eef2f6; --text:#172231; --muted:#6d7885; --line:rgba(7,24,44,.12);
+      --shadow:0 22px 70px rgba(7,24,44,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--red)}
+    h1,h2,h3{font-family:"Barlow Condensed",Arial,sans-serif;margin:0;line-height:.94;text-transform:uppercase}
+    h1{font-size:clamp(4.2rem,9vw,8.4rem);letter-spacing:-.04em}
+    h2{font-size:clamp(3rem,6vw,5.4rem);letter-spacing:-.035em}
+    h3{font-size:2rem}
+    p{line-height:1.7}
+    .btn{display:inline-flex;align-items:center;gap:.7rem;padding:15px 20px;border-radius:999px;font-weight:700;transition:.25s;border:1px solid transparent}
+    .btn-primary{background:var(--red);color:white;box-shadow:0 12px 32px rgba(227,38,54,.25)}
+    .btn-primary:hover{transform:translateY(-2px);background:#c91828}
+    .btn-ghost{border-color:rgba(255,255,255,.35);color:white;background:rgba(255,255,255,.06);backdrop-filter:blur(8px)}
+    .btn-ghost:hover{background:rgba(255,255,255,.12)}
+    header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(5,19,36,.7);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.1)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+    .logo{height:42px;width:auto;filter:brightness(0) invert(1)}
+    .links{display:flex;gap:28px;color:white;font-size:.9rem;font-weight:600}
+    .links a{opacity:.8}.links a:hover{opacity:1}
+    .nav-actions{display:flex;gap:10px}
+    .hero{min-height:100vh;position:relative;color:white;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy)}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(3,13,25,.96) 0%,rgba(3,13,25,.72) 45%,rgba(3,13,25,.18) 76%),
+      linear-gradient(0deg,rgba(3,13,25,.88) 0%,rgba(3,13,25,0) 48%),
+      url("assets/images/home-hero-dusk.webp") center/cover no-repeat;
+      transform:scale(1.02)}
+    .hero-content{position:relative;z-index:1;padding:170px 0 85px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
+    .hero h1 span{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.65)}
+    .hero-copy{max-width:760px}
+    .hero-copy p{font-size:1.15rem;max-width:650px;color:rgba(255,255,255,.78);margin:26px 0 32px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-panel{justify-self:end;width:min(360px,100%);padding:28px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(14px)}
+    .hero-panel strong{font-family:"Barlow Condensed";font-size:4rem;display:block;line-height:1;color:white}
+    .hero-panel small{color:rgba(255,255,255,.65)}
+    .stats{background:var(--navy);color:white}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12)}
+    .stat{padding:38px 28px;border-right:1px solid rgba(255,255,255,.12)}
+    .stat:last-child{border-right:0}.stat b{display:block;font:700 3rem/1 "Barlow Condensed";color:white}.stat span{font-size:.85rem;color:#9db0c5}
+    section{padding:110px 0}
+    .intro-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+    .intro-image{position:relative}
+    .intro-image img{height:640px;width:100%;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+    .badge{position:absolute;right:-22px;bottom:36px;background:white;border-radius:22px;padding:24px;box-shadow:var(--shadow);max-width:260px}
+    .badge b{font:700 2rem "Barlow Condensed";color:var(--navy)}
+    .intro-copy p{color:var(--muted);font-size:1.05rem}
+    .services{background:var(--mist)}
+    .section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:48px}
+    .section-head p{max-width:520px;color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border-radius:18px;padding:18px;min-height:205px;position:relative;overflow:hidden;border:1px solid var(--line);transition:.3s}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .card .num{font:700 2.7rem/1 "Barlow Condensed";color:#dfe5ec}
+    .card p{color:var(--muted)}
+    .card a{position:absolute;bottom:16px;font-weight:700;color:var(--red)}
+    .fleet{background:var(--navy);color:white;overflow:hidden}
+    .fleet-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .fleet p{color:#aebbc9}
+    .fleet-image{position:relative}
+    .fleet-image img{height:620px;object-fit:cover;border-radius:28px}
+    .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+    .feature{padding:18px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.04)}
+    .feature b{display:block;margin-bottom:6px}.feature small{color:#93a5b9}
+    .projects-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+    .project{position:relative;min-height:430px;border-radius:26px;overflow:hidden;color:white}
+    .project.small{min-height:205px}
+    .project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,19,36,.92),rgba(5,19,36,.05) 65%)}
+    .project-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:20px}
+    .project-copy p{margin:.4rem 0 0;color:rgba(255,255,255,.72)}
+    .side-stack{display:grid;gap:18px}
+    .cta{background:var(--red);color:white}
+    .cta-row{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta .btn{background:white;color:var(--navy)}
+    footer{background:#03101f;color:white;padding:70px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:50px}
+    .footer-logo{height:56px;filter:brightness(0) invert(1);margin-bottom:24px}
+    footer p,footer a{color:#9eafc1;font-size:.92rem}
+    .footer-title{font-weight:800;color:white;margin-bottom:16px}
+    .copyright{margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;color:#71859a;font-size:.8rem}
+    .mobile-toggle{display:none;color:white;font-size:1.5rem}
+    @media(max-width:900px){
+      .links,.nav-actions .btn-ghost{display:none}.mobile-toggle{display:block}
+      .hero-content,.intro-grid,.fleet-grid,.projects-grid,.footer-grid{grid-template-columns:1fr}
+      .hero-panel{justify-self:start}.stats-grid{grid-template-columns:1fr 1fr}
+      .cards{grid-template-columns:1fr}.section-head,.cta-row{align-items:flex-start;flex-direction:column}
+      .intro-image img,.fleet-image img{height:460px}.badge{right:12px}
+    }
+    @media(max-width:560px){
+      .project{min-height:360px}.project.small{min-height:235px}
+      .wrap{width:min(100% - 24px,1180px)}section{padding:76px 0}
+      .nav{height:70px}.logo{height:34px}.hero-content{padding-top:140px}
+      h1{font-size:4rem}.stats-grid{grid-template-columns:1fr 1fr}.stat{padding:24px 14px}.stat b{font-size:2.3rem}
+      .feature-list{grid-template-columns:1fr}.project{min-height:430px}.project.small{min-height:280px}
+    }
+  
+.home-footprint{background:#0b1512;color:#fff;padding:88px 0}
+.home-footprint-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;justify-items:center}
+.home-map-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:22px 24px 18px;width:min(100%,820px);margin:0 auto}
+.home-map-kicker{font-size:11px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:#aab8b0;margin-bottom:4px}
+.home-australia-map{width:100%;max-width:620px;margin:0 auto}
+.home-map-outline{fill:url(#homeAusFill);stroke:#fff;stroke-width:2;stroke-linejoin:round}
+.home-location-halo{fill:rgba(237,28,46,.22)}
+.home-location-dot{fill:#ed1c2e;stroke:#fff;stroke-width:3}
+.home-location-label{font-size:15px;font-weight:700;fill:#fff;paint-order:stroke;stroke:#0b1512;stroke-width:5px;stroke-linejoin:round}
+.home-map-note{font-size:10px;color:#89978f;margin-top:2px}
+.home-footprint-copy{max-width:900px;margin:0 auto;text-align:center}.home-footprint-copy .eyebrow{color:#9eb0a6}
+.home-footprint-copy h2{font-size:48px;line-height:1.02;text-transform:uppercase;letter-spacing:-1px;margin:0 0 22px}
+.home-footprint-copy p{font-size:16px;line-height:1.72;color:#c4cec9;margin:0}
+.home-location-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px auto 0;max-width:760px;text-align:left}
+.home-location-item{border-left:3px solid #ed1c2e;background:rgba(255,255,255,.055);padding:16px 18px}
+.home-location-item strong{display:block;font-size:13px;text-transform:uppercase;color:#fff}
+.home-location-item span{font-size:12px;color:#aebbb4}
+@media(max-width:900px){
+  .home-footprint-grid{grid-template-columns:1fr;gap:42px}
+}
+@media(max-width:600px){
+  .home-footprint{padding:66px 0}
+  .home-footprint-copy h2{font-size:38px}
+  .home-location-grid{grid-template-columns:1fr}
+}
+
+.footer-social{display:flex;align-items:center;gap:12px;margin-top:18px}.footer-social a{display:grid;place-items:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.35);border-radius:50%;color:#fff}.footer-social a:hover{background:#ed1c2e;border-color:#ed1c2e}.footer-social svg{width:18px;height:18px;fill:currentColor;stroke:currentColor;stroke-width:1.8}.footer-social svg rect,.footer-social svg circle{fill:none}.footer-social svg .fill-dot{fill:currentColor;stroke:none}
+    /* Homepage header aligned with subpage navigation */
+    header .wrap{width:min(1400px,calc(100% - 96px))}
+    header .nav{height:78px;gap:28px}
+    header .logo{height:48px}
+    header .links{gap:30px;font-size:13px;font-weight:700;align-items:center;white-space:nowrap}
+    header .links a{opacity:.92;padding:29px 0 24px;position:relative}
+    header .links a:hover,header .links a.active{opacity:1}
+    header .links a.active:after{content:"";position:absolute;left:0;right:0;bottom:10px;height:2px;background:var(--red)}
+    header .nav-actions{gap:24px;align-items:center;color:#fff;font-size:14px;font-weight:700}
+    header .header-phone{white-space:nowrap;color:#fff}
+    header .nav-actions .btn{border-radius:0;padding:15px 22px}
+    @media(max-width:1150px){header .links{gap:18px}header .header-phone{display:none}}
+    @media(max-width:900px){header .wrap{width:min(100% - 44px,920px)}header .links,header .nav-actions .header-phone,header .nav-actions .btn{display:none}}
+    @media(max-width:560px){header .wrap{width:calc(100% - 32px)}header .nav{height:70px}header .logo{height:38px}}
+
+    .header-phone-stack{display:flex;flex-direction:column;align-items:center;line-height:1.05;gap:3px}
+    .header-phone-stack small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);font-weight:800}
+</style>
+<link href="site.webmanifest" rel="manifest"/><link href="assets/images/favicon-c.svg?v=2" rel="icon" type="image/svg+xml"/><link href="favicon.ico?v=2" rel="icon" sizes="any"/><link href="assets/images/favicon-32.png?v=2" rel="icon" sizes="32x32" type="image/png"/><link href="assets/images/apple-touch-icon.png?v=2" rel="apple-touch-icon"/><meta content="#07110e" name="theme-color"/><link href="assets/css/enhancements.css" rel="stylesheet"/><link as_="image" fetchpriority="high" href="assets/images/home-civil-major-infrastructure.webp" rel="preload"/><link href="assets/css/performance.css" rel="stylesheet"/><link href="https://www.cartageaustralia.com/" rel="canonical"/><meta content="Cartage Australia" property="og:site_name"/><meta content="Bulk Transport &amp; Material Supply Australia | Cartage Australia" property="og:title"/><meta content="National bulk transport, quarry material supply and major project fleet solutions delivered safely and reliably across Australia." property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.cartageaustralia.com/" property="og:url"/><meta content="https://www.cartageaustralia.com/assets/images/home-hero-dusk.png" property="og:image"/><meta content="en_AU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Bulk Transport &amp; Material Supply Australia | Cartage Australia" name="twitter:title"/><meta content="National bulk transport, quarry material supply and major project fleet solutions delivered safely and reliably across Australia." name="twitter:description"/><meta content="https://www.cartageaustralia.com/assets/images/home-hero-dusk.png" name="twitter:image"/><script type="application/ld+json">[{"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"@id":"https://www.cartageaustralia.com/#organization","name":"Cartage Australia","url":"https://www.cartageaustralia.com/","logo":"https://www.cartageaustralia.com/assets/images/logo.png","telephone":"1800 366 633","email":"info@cartageaustralia.com","areaServed":{"@type":"Country","name":"Australia"},"sameAs":["https://www.facebook.com/Cartageaustralia","https://www.instagram.com/cartageaustralia/"]},{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.cartageaustralia.com/#webpage","url":"https://www.cartageaustralia.com/","name":"Bulk Transport & Material Supply Australia | Cartage Australia","description":"National bulk transport, quarry material supply and major project fleet solutions delivered safely and reliably across Australia.","isPartOf":{"@id":"https://www.cartageaustralia.com/#website"},"about":{"@id":"https://www.cartageaustralia.com/#organization"}},{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.cartageaustralia.com/#website","url":"https://www.cartageaustralia.com/","name":"Cartage Australia","publisher":{"@id":"https://www.cartageaustralia.com/#organization"},"inLanguage":"en-AU"},{"@context":"https://schema.org","@type":"SiteNavigationElement","name":["About Us","Services","Fleet","Sustainability","Safety & Compliance","Careers","Contact"],"url":["https://www.cartageaustralia.com/about/","https://www.cartageaustralia.com/services/","https://www.cartageaustralia.com/fleet/","https://www.cartageaustralia.com/sustainability/","https://www.cartageaustralia.com/safety-compliance/","https://www.cartageaustralia.com/careers/","https://www.cartageaustralia.com/contact/"]}]</script>
+<style id="homepage-hero-height-refinement">
+/* Homepage-only hero refinement: reduces excess image/blank space on desktop and mobile. */
+@media (min-width: 901px){
+  body .hero{min-height:clamp(620px,78vh,760px);}
+  body .hero-content{padding-top:138px;padding-bottom:62px;}
+}
+@media (min-width: 561px) and (max-width: 900px){
+  body .hero{min-height:clamp(600px,78svh,720px);}
+  body .hero-content{padding-top:118px;padding-bottom:54px;}
+}
+@media (max-width: 560px){
+  body .hero{min-height:clamp(520px,70svh,590px);}
+  body .hero-content{padding-top:104px;padding-bottom:38px;gap:24px;}
+  body .hero-copy p{margin:18px 0 22px;}
+  body .hero-panel{padding:20px;}
+}
+</style>
+<style id="mobile-home-hero-cta-removal">
+@media (max-width:650px){
+  .hero-actions{display:none!important;}
+}
+</style>
+<link href="assets/css/home-interactions.css?v=1" rel="stylesheet"/>
+<style id="mobile-home-hero-text-clearance">
+/* Mobile only: keep homepage messaging in the open sky and off the truck. Desktop is unchanged. */
+@media (max-width:680px){
+  body .hero{
+    align-items:flex-start;
+  }
+  body .hero:before{
+    /* Mobile only: retain the left-shifted cab, but give the copy more clear sky. */
+    background-position:68% top;
+    background-size:auto 112%;
+  }
+  body .hero-content{
+    display:block;
+    padding-top:24px;
+    padding-bottom:0;
+  }
+  body .hero-copy{
+    max-width:86%;
+  }
+  body .hero-copy h1{
+    max-width:330px;
+  }
+  body .hero-copy p{
+    max-width:300px;
+    margin-top:10px;
+    margin-bottom:0;
+    font-size:.92rem;
+    line-height:1.42;
+  }
+}
+@media (max-width:390px){
+  body .hero-content{padding-top:18px;}
+  body .hero-copy{max-width:90%;}
+  body .hero-copy p{max-width:282px;font-size:.88rem;line-height:1.4;}
+}
+</style>
+<style id="mobile-home-hero-sequenced-reveal">
+/* Mobile-only homepage hero: position copy directly beneath the fixed header and reveal it in stages. Desktop is untouched. */
+@media (max-width:680px){
+  body .hero{
+    min-height:clamp(520px,70svh,590px);
+    align-items:flex-start!important;
+  }
+  body .hero-content{
+    position:absolute!important;
+    top:76px!important;
+    left:0!important;
+    right:0!important;
+    width:min(100% - 24px,1180px)!important;
+    margin:0 auto!important;
+    padding:0!important;
+    z-index:2!important;
+  }
+  body .hero-copy{max-width:92%!important;}
+  body .hero-copy .eyebrow{margin:0 0 5px!important;}
+  body .hero-copy h1{
+    margin:0!important;
+    line-height:.93!important;
+    max-width:330px!important;
+  }
+  body .hero-copy p.hero-supporting-copy{
+    margin:9px 0 0!important;
+    max-width:292px!important;
+    font-size:.90rem!important;
+    line-height:1.38!important;
+  }
+  body .hero-line{display:inline-block;}
+  body:not(.hero-sequence-ready) .hero-copy .eyebrow,
+  body:not(.hero-sequence-ready) .hero-line-primary,
+  body:not(.hero-sequence-ready) .hero-line-secondary,
+  body:not(.hero-sequence-ready) .hero-supporting-copy{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  body.hero-sequence-ready .hero-copy .eyebrow{animation:heroReveal .48s ease-out .15s both;}
+  body.hero-sequence-ready .hero-line-primary{animation:heroReveal .58s cubic-bezier(.22,.8,.22,1) .34s both;}
+  body.hero-sequence-ready .hero-line-secondary{animation:heroReveal .58s cubic-bezier(.22,.8,.22,1) .82s both;}
+  body.hero-sequence-ready .hero-supporting-copy{animation:heroReveal .58s ease-out 1.35s both;}
+}
+@media (max-width:390px){
+  body .hero-content{top:74px!important;}
+  body .hero-copy p.hero-supporting-copy{max-width:278px!important;font-size:.87rem!important;}
+}
+@keyframes heroReveal{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media (prefers-reduced-motion:reduce){
+  body .hero-copy .eyebrow, body .hero-line-primary, body .hero-line-secondary, body .hero-supporting-copy{
+    opacity:1!important;transform:none!important;animation:none!important;
+  }
+}
+</style>
+<script>
+(function(){
+  function reveal(){
+    if(window.matchMedia('(max-width: 680px)').matches){
+      window.setTimeout(function(){document.body.classList.add('hero-sequence-ready');},220);
+    } else {
+      document.body.classList.add('hero-sequence-ready');
+    }
+  }
+  if(document.readyState === 'complete') reveal();
+  else window.addEventListener('load', reveal, {once:true});
+})();
+</script>
+<style id="homepage-heading-primary-solid">
+/* Restore the first homepage headline line to solid white; keep the second line outlined. */
+.hero .hero-line-primary{color:#fff!important;-webkit-text-stroke:0!important;text-shadow:none!important}
+.hero .hero-line-secondary{color:transparent!important;-webkit-text-stroke:1px rgba(255,255,255,.65)!important}
+</style>
+<link href="assets/css/header-lock.css?v=1" rel="stylesheet"/></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header ca-global-header">
+<div class="nav-shell nav">
+<a class="brand" href="index.html"><img alt="Cartage Australia" class="logo" decoding="async" fetchpriority="high" loading="eager" src="assets/images/logo.png"/></a>
+<nav aria-label="Primary navigation" class="nav-links"><a class="active" href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="fleet.html">Fleet</a><a href="sustainability.html">Sustainability</a><a href="safety-compliance.html">Safety &amp; Compliance</a><a href="contact.html">Contact</a></nav>
+<div class="nav-actions">
+<a class="phone header-phone phone-stack" href="tel:1800366633"><span>☎ 1800 366 633</span><small>24/7</small></a>
+<a class="header-action-btn header-quote-btn" href="contact.html">Get a Quote</a>
+<a class="portal-btn header-action-btn" href="client-portal.html">Client Portal</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-btn" type="button"></button>
+</div>
+</div>
+</header>
+<main id="main-content">
+<section class="hero">
+<div class="wrap hero-content">
+<div class="hero-copy">
+<div class="eyebrow">Quarry · Civil · Infrastructure</div>
+<h1><span class="hero-line hero-line-primary">National Capability.</span><br/><span class="hero-line hero-line-secondary">Local Commitment.</span></h1>
+<p class="hero-supporting-copy">High-capacity bulk transport, material management and project logistics delivered by one of Australia’s most experienced tipper fleets.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="contact.html">Discuss your project →</a>
+<a class="btn btn-ghost" href="fleet.html">Explore the fleet</a>
+</div>
+</div>
+</div>
+</section>
+<div class="stats">
+<div class="wrap stats-grid">
+<div class="stat"><b>135+</b><span>Truck &amp; trailer combinations</span></div>
+<div class="stat"><b>35,000t+</b><span>Daily material capacity</span></div>
+<div class="stat"><b>24/7</b><span>Operations and fleet monitoring</span></div>
+<div class="stat"><b>59t</b><span>Payload capacity available</span></div>
+</div>
+</div>
+<section id="about">
+<div class="wrap intro-grid">
+<div class="intro-image">
+<picture><source sizes="100vw" srcset="assets/images/responsive/home-transport-capability-1600.webp 1600w, assets/images/responsive/home-transport-capability-2048.webp 2048w, assets/images/responsive/home-transport-capability-480.webp 480w, assets/images/responsive/home-transport-capability-960.webp 960w" type="image/webp"/><img alt="Cartage Australia fleet" decoding="async" fetchpriority="high" height="1364" loading="lazy" src="assets/images/home-transport-capability.webp" width="2048"/></picture>
+</div>
+<div class="intro-copy">
+<div class="eyebrow">Who we are</div>
+<h2>Transport capability without compromise.</h2>
+<p>Cartage Australia specialises in the transport of quarry products, raw materials and bulk materials. Since 2004, the business has grown around a simple commitment: provide the safest, most reliable and most productive service possible.</p>
+<p>Our scale, modern equipment and experienced operations team allow us to support ongoing supply programs, short-term campaigns and major civil and infrastructure projects.</p>
+<a class="btn btn-primary" href="about.html">About Us</a>
+</div>
+</div>
+</section>
+<section class="services" id="services">
+<div class="wrap">
+<div class="section-head">
+<div><div class="eyebrow">What we do</div><h2>One fleet.<br/>Every challenge.</h2></div>
+<p>From daily quarry movements to complex infrastructure programs, our service is tailored around the job, the site and the customer.<br/><a href="services.html" style="display:inline-block;margin-top:12px;color:#e32636;font-weight:800">Explore all services →</a></p>
+</div>
+<div class="cards">
+<article class="card"><div class="num">01</div><h3>Quarry transport</h3><p>Screenings, sand, crushed rock and specialty sands delivered to concrete plants and project sites around the clock.</p><a href="contact.html">Enquire →</a></article>
+<article class="card"><div class="num">02</div><h3>Raw materials</h3><p>Loose bulk materials including soils, fertilisers, mulch, recycled products, lime, cullet and specialist industrial products.</p><a href="contact.html">Enquire →</a></article>
+<article class="card"><div class="num">03</div><h3>Material management</h3><p>Stock level management, after-hours replenishment, material relocation, loader support and complete project coordination.</p><a href="contact.html">Enquire →</a></article>
+</div>
+</div>
+</section>
+<section aria-labelledby="materials-interactive-title" class="interactive-materials">
+<div class="wrap interactive-materials-head">
+<div>
+<div class="eyebrow">Materials in motion</div>
+<h2 id="materials-interactive-title">Move through the materials we handle.</h2>
+</div>
+<p>Explore a selection of the bulk materials Cartage Australia transports and supplies. Move your cursor across the gallery on desktop, or swipe on mobile.</p>
+</div>
+<div class="interactive-materials-rail" data-material-rail="">
+<a class="interactive-material is-active" data-material-card="" href="services.html" style="--material-image:url('../images/services-aggregates-premium.jpg')">
+<img alt="Aggregates" decoding="async" loading="lazy" src="assets/images/services-aggregates-premium.jpg"/>
+<span class="interactive-material-shade"></span><span class="interactive-material-copy"><strong>Aggregates</strong><small>Reliable bulk supply for concrete, civil and construction.</small></span>
+</a>
+<a class="interactive-material" data-material-card="" href="services.html">
+<img alt="Sand" decoding="async" loading="lazy" src="assets/images/services-sand-premium.jpg"/>
+<span class="interactive-material-shade"></span><span class="interactive-material-copy"><strong>Sand</strong><small>Concrete, washed and specialty sands.</small></span>
+</a>
+<a class="interactive-material" data-material-card="" href="services.html">
+<img alt="Screenings" decoding="async" loading="lazy" src="assets/images/services-screenings-premium.jpg"/>
+<span class="interactive-material-shade"></span><span class="interactive-material-copy"><strong>Screenings</strong><small>Quarry products delivered at project scale.</small></span>
+</a>
+<a class="interactive-material" data-material-card="" href="services.html">
+<img alt="Crushed rock" decoding="async" loading="lazy" src="assets/images/services-crushed-rock-premium.jpg"/>
+<span class="interactive-material-shade"></span><span class="interactive-material-copy"><strong>Crushed Rock</strong><small>High-volume supply for civil and infrastructure works.</small></span>
+</a>
+<a class="interactive-material" data-material-card="" href="services.html">
+<img alt="Topsoil" decoding="async" loading="lazy" src="assets/images/services-topsoil-premium.jpg"/>
+<span class="interactive-material-shade"></span><span class="interactive-material-copy"><strong>Topsoil</strong><small>Bulk landscape and project material movements.</small></span>
+</a>
+<a class="interactive-material" data-material-card="" href="services.html">
+<img alt="Recycled material" decoding="async" loading="lazy" src="assets/images/services-recycled-premium.jpg"/>
+<span class="interactive-material-shade"></span><span class="interactive-material-copy"><strong>Recycled</strong><small>Productive movement of recovered construction materials.</small></span>
+</a>
+</div>
+<div class="wrap interactive-materials-footer"><a class="interactive-text-link" href="services.html">Explore materials &amp; services <span>→</span></a></div>
+</section>
+<section class="fleet" id="fleet">
+<div class="wrap fleet-grid">
+<div>
+<div class="eyebrow">Our fleet</div>
+<h2>Modern fleet.<br/>Serious capability.</h2>
+<p>Our PBS-approved fleet is built for high payloads, demanding environments and dependable performance. Every combination is supported by modern safety technology, real-time tracking and disciplined maintenance systems.</p>
+<a class="btn btn-primary" href="fleet.html" style="margin-top:8px">Explore the full fleet →</a>
+<div class="feature-list">
+<div class="feature"><b>Euro 5 &amp; Euro 6</b><small>Modern Volvo and European trucks</small></div>
+<div class="feature"><b>100% disc brakes</b><small>Across trucks and trailers</small></div>
+<div class="feature"><b>Live fleet visibility</b><small>GPS, fatigue and speed monitoring</small></div>
+<div class="feature"><b>Advanced trailer safety</b><small>Slope detection and stability systems</small></div>
+</div>
+</div>
+<div class="fleet-image">
+<img alt="Cartage Australia truck" decoding="async" loading="lazy" src="assets/images/modern-fleet-new.jpg"/>
+</div>
+</div>
+</section>
+<section id="projects">
+<div class="wrap">
+<div class="section-head">
+<div><div class="eyebrow">Project experience</div><h2>Proven where it matters.</h2></div>
+<p>Our fleet and people have supported major projects, high-volume supply programs and complex material movements across demanding operating environments.</p>
+</div>
+<div class="projects-grid">
+<article class="project small"><picture><source sizes="100vw" srcset="assets/images/responsive/home-bulk-supply-1600.webp 1600w, assets/images/responsive/home-bulk-supply-2048.webp 2048w, assets/images/responsive/home-bulk-supply-480.webp 480w, assets/images/responsive/home-bulk-supply-960.webp 960w" type="image/webp"/><img alt="Cartage Australia truck being loaded with sand at a quarry" decoding="async" height="1364" loading="lazy" src="assets/images/home-bulk-supply.webp" width="2048"/></picture><div class="project-copy"><h3>Bulk supply</h3><p>Quarry to plant, day and night.</p></div></article>
+<div class="side-stack">
+<article class="project">
+<picture><source sizes="100vw" srcset="assets/images/responsive/home-civil-major-infrastructure-1600.webp 1600w, assets/images/responsive/home-civil-major-infrastructure-2048.webp 2048w, assets/images/responsive/home-civil-major-infrastructure-480.webp 480w, assets/images/responsive/home-civil-major-infrastructure-960.webp 960w" type="image/webp"/><img alt="Cartage Australia trucks supporting a major civil infrastructure project" decoding="async" height="1143" loading="lazy" src="assets/images/home-civil-major-infrastructure.webp" width="2048"/></picture>
+<div class="project-copy"><h3>CIVIL &amp; MAJOR INFRASTRUCTURE PROJECTS</h3><p>Large-scale, high-frequency material transport delivered safely and consistently.</p></div>
+</article>
+<article class="project small"><picture><source sizes="100vw" srcset="assets/images/responsive/home-material-relocation-1600.webp 1600w, assets/images/responsive/home-material-relocation-2048.webp 2048w, assets/images/responsive/home-material-relocation-480.webp 480w, assets/images/responsive/home-material-relocation-960.webp 960w" type="image/webp"/><img alt="Cartage Australia truck operating at a quarry" decoding="async" height="1187" loading="lazy" src="assets/images/home-material-relocation.webp" width="2048"/></picture><div class="project-copy"><h3>Material relocation</h3><p>High-volume movements with full operational control.</p></div></article>
+</div>
+</div>
+</div>
+</section>
+<section class="home-footprint">
+<div class="container home-footprint-grid">
+<div class="home-map-card">
+<div class="home-map-kicker">Our operating footprint</div>
+<svg aria-label="Accurate map of Australia showing Cartage Australia operations in Adelaide, Melbourne, Brisbane and Harvey Bay" class="home-australia-map" role="img" viewbox="0 0 640 500">
+<defs>
+<lineargradient id="homeAusFill" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="100%" stop-color="#dfe7e2"></stop>
+</lineargradient>
+<filter height="140%" id="homeMapShadow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="10" flood-color="#000000" flood-opacity=".16" stddeviation="12"></fedropshadow>
+</filter>
+</defs>
+<path class="home-map-outline" d="M 480.0 427.3 L 487.8 428.2 L 488.7 443.6 L 484.2 448.1 L 482.9 458.5 L 478.3 455.0 L 469.3 464.0 L 466.6 463.3 L 458.7 462.9 L 450.7 451.8 L 448.9 443.2 L 441.4 431.9 L 441.7 426.0 L 450.2 427.1 L 462.8 431.6 L 469.8 429.8 L 480.0 427.3 Z M 200.3 315.8 L 186.5 322.4 L 175.3 325.4 L 172.8 332.2 L 168.0 337.5 L 157.0 337.8 L 148.8 339.0 L 137.3 336.6 L 128.0 338.0 L 119.1 338.6 L 111.4 345.5 L 107.6 344.9 L 101.1 348.6 L 94.8 352.7 L 85.4 352.2 L 76.7 352.2 L 62.9 343.9 L 55.9 341.5 L 56.2 334.0 L 62.6 332.3 L 64.8 329.3 L 64.4 324.6 L 66.0 315.6 L 64.5 307.9 L 57.7 294.8 L 55.5 287.4 L 56.1 280.0 L 50.9 271.5 L 50.6 267.7 L 44.8 262.6 L 43.2 252.4 L 35.8 242.1 L 34.0 236.6 L 39.7 242.2 L 35.3 230.1 L 41.8 233.9 L 45.6 238.9 L 45.4 232.3 L 39.0 222.1 L 37.7 218.0 L 34.7 214.1 L 36.1 206.6 L 38.8 203.4 L 40.5 196.9 L 39.2 189.3 L 44.5 180.0 L 45.5 189.8 L 51.0 180.9 L 61.5 176.6 L 67.9 171.0 L 77.8 166.3 L 83.7 165.3 L 87.3 166.9 L 97.5 162.0 L 105.4 160.6 L 107.3 157.7 L 110.8 156.5 L 118.0 156.8 L 131.6 153.0 L 138.7 147.3 L 142.0 140.3 L 149.6 133.8 L 150.2 128.6 L 150.5 121.5 L 159.6 110.5 L 165.1 121.7 L 170.6 119.1 L 166.0 113.0 L 170.0 106.7 L 175.8 109.5 L 177.3 99.6 L 184.4 93.2 L 187.6 88.1 L 194.1 85.9 L 194.3 82.3 L 200.0 83.8 L 200.2 80.5 L 205.9 78.6 L 212.2 76.9 L 221.8 82.9 L 229.0 90.5 L 237.1 90.6 L 245.4 91.8 L 242.6 84.7 L 248.9 74.3 L 254.7 70.9 L 252.7 67.7 L 258.3 60.3 L 266.2 55.7 L 272.8 57.2 L 283.7 54.8 L 283.5 48.1 L 274.0 43.9 L 280.9 42.0 L 289.5 45.2 L 296.4 50.5 L 307.3 53.8 L 311.1 52.5 L 319.1 56.5 L 326.7 52.8 L 331.6 53.9 L 334.6 51.4 L 340.6 57.9 L 337.1 64.8 L 332.2 70.1 L 327.7 70.5 L 329.2 75.7 L 325.4 82.2 L 320.8 88.5 L 321.7 92.2 L 332.0 99.4 L 342.0 103.5 L 348.7 108.0 L 358.1 115.7 L 361.8 115.7 L 368.6 119.0 L 370.5 123.0 L 382.9 127.4 L 391.5 123.0 L 394.0 116.0 L 396.7 110.3 L 398.3 103.2 L 402.2 92.8 L 400.4 86.5 L 401.4 82.8 L 399.9 75.3 L 401.6 65.6 L 404.1 62.9 L 402.0 58.6 L 405.2 51.7 L 407.6 44.6 L 408.0 40.9 L 412.8 36.0 L 416.5 42.4 L 417.4 50.5 L 420.6 52.1 L 421.1 57.5 L 425.9 64.1 L 426.8 71.5 L 426.4 76.2 L 431.1 86.4 L 439.4 81.5 L 443.7 87.0 L 449.9 92.0 L 448.6 97.8 L 451.4 108.9 L 453.3 115.4 L 456.6 117.0 L 460.1 128.1 L 458.9 134.8 L 463.1 143.6 L 477.1 150.4 L 486.3 156.6 L 495.0 162.2 L 493.3 165.4 L 500.7 173.5 L 505.8 187.6 L 511.0 184.7 L 516.2 190.3 L 519.4 188.3 L 521.6 202.1 L 530.9 210.1 L 536.9 215.0 L 547.0 225.5 L 550.7 236.0 L 551.0 243.4 L 550.1 251.4 L 556.3 262.4 L 555.6 273.9 L 553.3 279.9 L 549.8 291.5 L 550.1 299.0 L 547.5 308.3 L 541.8 320.1 L 532.2 326.5 L 527.4 336.5 L 523.1 342.9 L 519.2 354.1 L 514.2 360.6 L 510.9 370.3 L 509.3 379.3 L 509.9 383.4 L 502.5 387.9 L 488.0 388.4 L 476.0 393.7 L 470.0 398.7 L 462.2 404.3 L 451.4 398.6 L 443.5 396.3 L 445.5 389.5 L 438.4 392.0 L 427.0 401.4 L 415.8 397.8 L 408.4 395.8 L 401.0 394.9 L 388.4 391.1 L 380.0 383.1 L 377.6 373.2 L 374.6 366.7 L 368.2 361.4 L 355.7 359.8 L 360.0 353.6 L 356.9 343.9 L 350.5 352.9 L 339.0 355.3 L 345.8 348.1 L 347.7 340.6 L 352.7 334.2 L 351.7 324.6 L 341.1 335.7 L 333.0 340.1 L 328.1 350.5 L 317.9 345.1 L 318.3 338.2 L 310.2 328.8 L 303.4 324.0 L 305.8 321.0 L 289.1 313.1 L 280.0 312.7 L 267.5 306.4 L 244.3 307.6 L 227.5 312.3 L 212.7 316.6 L 200.3 315.8 Z" filter="url(#homeMapShadow)"></path>
+<g class="map-marker"><circle class="home-location-halo" cx="549.3" cy="212.0" r="15"></circle><circle class="home-location-dot" cx="549.3" cy="212.0" r="7"></circle><text class="home-location-label" text-anchor="end" x="532.0" y="199.0">Harvey Bay</text></g><g class="map-marker"><circle class="home-location-halo" cx="549.3" cy="254.1" r="15"></circle><circle class="home-location-dot" cx="549.3" cy="254.1" r="7"></circle><text class="home-location-label" text-anchor="start" x="567.3" y="279.1">Brisbane</text></g><g class="map-marker"><circle class="home-location-halo" cx="444.5" cy="388.4" r="15"></circle><circle class="home-location-dot" cx="444.5" cy="388.4" r="7"></circle><text class="home-location-label" text-anchor="start" x="462.5" y="397.4">Melbourne</text></g><g class="map-marker"><circle class="home-location-halo" cx="362.0" cy="351.0" r="15"></circle><circle class="home-location-dot" cx="362.0" cy="351.0" r="7"></circle><text class="home-location-label" text-anchor="end" x="344.0" y="358.0">Adelaide</text></g>
+</svg>
+<div class="home-map-note">Operating locations shown are indicative.</div>
+<div class="home-footprint-copy">
+<div class="eyebrow">Across three states</div>
+<h2>Local teams.<br/>National capability.</h2>
+<p>Our operating footprint allows us to support customers with locally managed fleets while coordinating equipment, people and capability across Victoria, Queensland and South Australia.</p>
+<div class="home-location-grid">
+<div class="home-location-item"><strong>Melbourne</strong><span>Victorian operations</span></div>
+<div class="home-location-item"><strong>Brisbane</strong><span>Queensland operations</span></div>
+<div class="home-location-item"><strong>Harvey Bay</strong><span>Regional Queensland support</span></div>
+<div class="home-location-item"><strong>Adelaide</strong><span>South Australian operations</span></div>
+</div>
+</div>
+</div>
+</div></section>
+<section class="services" id="careers">
+<div class="wrap section-head">
+<div><div class="eyebrow">Careers</div><h2>Drive with a team<br/>that invests in you.</h2></div>
+<div><p>We are always looking for safe, reliable and experienced HC and MC drivers to join our growing operations.</p><a class="btn btn-primary" href="careers.html">Find out more</a></div>
+</div>
+</section>
+<section class="cta" id="contact">
+<div class="wrap cta-row">
+<div><div class="eyebrow" style="color:#ffd5d9">Start a conversation</div><h2>Have material to move?</h2><p>Speak with our team about your transport, fleet or project requirements.</p></div>
+<a class="btn" href="mailto:quotes@cartageaustralia.com">quotes@cartageaustralia.com →</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+<div><img alt="Cartage Australia" class="footer-logo" decoding="async" fetchpriority="high" loading="eager" src="assets/embedded/5eb1602f1a103f19.webp"/><p>Quarry products, raw materials and project transport backed by modern equipment, experienced people and a safety-led culture.</p><div aria-label="Social media links" class="footer-social">
+<a aria-label="Cartage Australia on Facebook" href="https://www.facebook.com/Cartageaustralia" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v9h4v-9h3.2l.8-4H13V9c0-.7.3-1 1-1Z"></path></svg></a>
+<a aria-label="Cartage Australia on Instagram" href="https://www.instagram.com/cartageaustralia/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4.2"></circle><circle class="fill-dot" cx="17.5" cy="6.5" r="1"></circle></svg></a>
+</div></div>
+<div><div class="footer-title">Contact</div><p><a href="tel:1800366633">1800 366 633</a><br/><a href="mailto:info@cartageaustralia.com">info@cartageaustralia.com</a></p><p><a href="client-portal.html">Client Portal →</a></p></div>
+<div><div class="footer-title">Explore</div><p><a href="index.html">Home</a><br/><a href="about.html">About Us</a><br/><a href="services.html">Services</a><br/><a href="fleet.html">Fleet</a><br/><a href="sustainability.html">Sustainability</a><br/><a href="safety-compliance.html">Safety &amp; Compliance</a><br/><a href="contact.html">Contact</a><br/><a href="careers.html">Careers</a></p></div>
+</div>
+<div class="copyright"><span>© 2026 Cartage Australia Pty Ltd</span><span>Safety · Service · Reliability</span></div>
+</div>
+</footer>
+<div aria-hidden="false" class="quote-modal"><div class="quote-modal-backdrop" data-close-quote=""></div><section aria-labelledby="quote-title" aria-modal="true" class="quote-dialog" role="dialog"><button aria-label="Close quote form" class="quote-close" data-close-quote="" type="button">×</button><h2 id="quote-title">Request a Quote</h2><p>Tell us about the work and your email app will open with the completed enquiry.</p><form class="quote-form"><label>Name<input autocomplete="name" name="name" required=""/></label><label>Company<input autocomplete="organization" name="company"/></label><label>Phone<input autocomplete="tel" name="phone" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Project location<input name="projectLocation" required=""/></label><label>Material type<select name="material"><option>Aggregates</option><option>Sand</option><option>Top soil</option><option>Crushed rock</option><option>Recycled products</option><option>Other / mixed materials</option></select></label><label>Estimated quantity<input name="quantity" placeholder="Tonnes or loads"/></label><label>Required dates<input name="dates" placeholder="Start date or date range"/></label><label class="full">Work type<select name="workType"><option>One-off movement</option><option>Ongoing supply</option><option>Dedicated project fleet</option><option>Pricing / tender enquiry</option></select></label><label class="full">Project details<textarea name="details" required=""></textarea></label><button class="quote-submit" type="submit">Prepare Email Enquiry</button><p class="quote-note">This form does not upload or store information. It prepares an email to quotes@cartageaustralia.com.</p></form></section></div><div aria-hidden="true" class="page-transition"></div><div class="mobile-action-bar"><a href="tel:1800366633">Call 1800 366 633</a><button class="js-quote" type="button">Get a Quote</button></div><script defer="True" src="assets/js/main.js"></script><button aria-label="Back to top" class="back-to-top" title="Back to top" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"></path></svg></button>
+<script defer="" src="assets/js/home-interactions.js?v=1"></script>
+</body>
+</html>
