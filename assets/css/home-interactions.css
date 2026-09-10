@@ -1,0 +1,34 @@
+/* Homepage interactive layer. Scoped so other pages remain unchanged. */
+.interactive-materials{padding:92px 0 86px;background:#07110e;color:#fff;overflow:hidden}
+.interactive-materials-head{display:flex;justify-content:space-between;align-items:end;gap:48px;margin-bottom:34px}
+.interactive-materials-head h2{margin:.35rem 0 0;max-width:760px;font-size:clamp(34px,4vw,58px);line-height:1.02;letter-spacing:-.035em}
+.interactive-materials-head p{max-width:470px;margin:0;color:#b9c3bf;line-height:1.65}
+.interactive-materials-rail{display:flex;gap:12px;width:min(1500px,calc(100% - 32px));margin:0 auto;height:470px}
+.interactive-material{position:relative;display:block;flex:1 1 0;min-width:0;overflow:hidden;border-radius:3px;color:#fff;isolation:isolate;transition:flex .55s cubic-bezier(.2,.72,.2,1),transform .35s ease}
+.interactive-material.is-active,.interactive-material:hover{flex:2.35 1 0}
+.interactive-material img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.025);transition:transform .7s cubic-bezier(.2,.72,.2,1),filter .4s ease}
+.interactive-material:hover img,.interactive-material.is-active img{transform:scale(1.07)}
+.interactive-material-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,6,.03) 32%,rgba(2,7,6,.82) 100%);z-index:1}
+.interactive-material-copy{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;display:grid;gap:8px}
+.interactive-material-copy strong{font-size:23px;text-transform:uppercase;letter-spacing:-.01em}
+.interactive-material-copy small{font-size:14px;line-height:1.45;color:#d7dfdc;max-width:320px;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .35s ease}
+.interactive-material:hover small,.interactive-material.is-active small{opacity:1;transform:none}
+.interactive-materials-footer{display:flex;justify-content:flex-end;margin-top:24px}
+.interactive-text-link{color:#fff;font-weight:800;text-decoration:none}.interactive-text-link span{display:inline-block;transition:transform .2s}.interactive-text-link:hover span{transform:translateX(5px)}
+
+
+/* Magnetic effect remains transform-only for smooth compositing. */
+@media (hover:hover) and (pointer:fine){
+  body.home-magnetic-ready .btn,body.home-magnetic-ready .portal-btn,body.home-magnetic-ready .interactive-text-link{will-change:transform;transition:transform .16s ease-out,background .2s,color .2s,border-color .2s}
+}
+
+@media(max-width:900px){
+  .interactive-materials{padding:64px 0 58px}.interactive-materials-head{display:block;margin-bottom:25px}.interactive-materials-head p{margin-top:18px}
+  .interactive-materials-rail{height:350px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-left:12px;width:100%;padding:0 12px 8px;gap:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .interactive-materials-rail::-webkit-scrollbar{display:none}.interactive-material,.interactive-material.is-active,.interactive-material:hover{flex:0 0 72vw;max-width:330px;scroll-snap-align:start}.interactive-material-copy small{opacity:1;transform:none}
+  .interactive-materials-footer{justify-content:flex-start}
+}
+@media(max-width:650px){
+  .interactive-materials{padding:52px 0 50px}.interactive-materials-head h2{font-size:34px}.interactive-materials-head p{font-size:14px}.interactive-materials-rail{height:300px}.interactive-material{flex-basis:76vw}.interactive-material-copy{left:18px;right:18px;bottom:18px}.interactive-material-copy strong{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){.interactive-material,.interactive-material img,.interactive-material-copy small{transition:none!important}}

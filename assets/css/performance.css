@@ -1,0 +1,2 @@
+/* Mobile performance enhancements; layout and media quality remain unchanged. */
+img{height:auto}picture{display:contents}.content-section,.feature-grid,.service-grid,.leadership-grid{content-visibility:auto;contain-intrinsic-size:1px 700px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
