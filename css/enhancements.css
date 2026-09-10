@@ -1,0 +1,530 @@
+
+/* Dynamic experience, accessibility and SEO-supporting UI */
+:root{--ca-header-height:78px;--ca-focus:#ff3848}
+html{scroll-padding-top:100px}
+body{overflow-x:hidden}
+.site-header,header{transition:height .28s ease,background .28s ease,box-shadow .28s ease,backdrop-filter .28s ease}
+.site-header.is-scrolled,body>header.is-scrolled{background:rgba(4,9,12,.96)!important;box-shadow:0 10px 35px rgba(0,0,0,.18);backdrop-filter:blur(18px)}
+.site-header.is-scrolled{height:68px}.site-header.is-scrolled .nav{height:68px}.site-header.is-scrolled .brand img{height:40px}
+body>header.is-scrolled .nav{height:70px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--ca-focus);outline-offset:3px}
+.skip-link{position:fixed;left:16px;top:-80px;z-index:9999;background:#fff;color:#111;padding:12px 16px;font-weight:800;border-radius:0 0 8px 8px;transition:top .2s}.skip-link:focus{top:0}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .72s cubic-bezier(.2,.65,.25,1),transform .72s cubic-bezier(.2,.65,.25,1)}
+.reveal.is-visible{opacity:1;transform:none}.reveal-stagger>*{opacity:0;transform:translateY(18px);transition:opacity .62s ease,transform .62s ease}.reveal-stagger.is-visible>*{opacity:1;transform:none}.reveal-stagger.is-visible>*:nth-child(2){transition-delay:.08s}.reveal-stagger.is-visible>*:nth-child(3){transition-delay:.16s}.reveal-stagger.is-visible>*:nth-child(4){transition-delay:.24s}.reveal-stagger.is-visible>*:nth-child(5){transition-delay:.32s}.reveal-stagger.is-visible>*:nth-child(6){transition-delay:.40s}
+.ca-card-hover{transition:transform .28s ease,box-shadow .28s ease}.ca-card-hover:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(7,24,44,.13)}
+.hero-media,.services-premium-video,.about-hero:before{will-change:transform;transition:transform .1s linear}
+.breadcrumb{position:relative;z-index:4;background:#f4f6f6;border-bottom:1px solid rgba(17,24,32,.09)}.breadcrumb .container,.breadcrumb .wrap{padding:14px 0;font-size:13px;color:#65717a}.breadcrumb a{font-weight:700}.breadcrumb span{margin:0 8px;color:#9aa4aa}
+.page-anchor-nav{position:sticky;top:68px;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid #e3e7e9}.page-anchor-nav .anchor-inner{display:flex;align-items:center;gap:8px;overflow:auto;padding:10px 0;scrollbar-width:none}.page-anchor-nav .anchor-inner::-webkit-scrollbar{display:none}.page-anchor-nav a{white-space:nowrap;padding:9px 14px;border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#53616a}.page-anchor-nav a:hover,.page-anchor-nav a.is-active{background:#e51b2a;color:#fff}
+.quote-modal{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:20px}.quote-modal.is-open{display:grid}.quote-modal-backdrop{position:absolute;inset:0;background:rgba(3,9,14,.76);backdrop-filter:blur(8px)}.quote-dialog{position:relative;width:min(760px,100%);max-height:calc(100vh - 40px);overflow:auto;background:#fff;padding:34px;border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.34)}.quote-dialog h2{margin:0 0 8px;text-transform:uppercase}.quote-dialog>p{color:#65717a;margin:0 0 24px}.quote-close{position:absolute;right:18px;top:16px;border:0;background:#eef1f2;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer}.quote-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}.quote-form label{display:grid;gap:7px;font-size:13px;font-weight:800}.quote-form label.full{grid-column:1/-1}.quote-form input,.quote-form select,.quote-form textarea{width:100%;border:1px solid #cfd6da;border-radius:9px;padding:12px 13px;font:inherit;background:#fff}.quote-form textarea{min-height:110px;resize:vertical}.quote-submit{grid-column:1/-1;border:0;background:#e51b2a;color:#fff;padding:14px 20px;font-weight:800;cursor:pointer;border-radius:8px}.quote-note{grid-column:1/-1;font-size:12px;color:#69757c;margin:0}
+.mobile-action-bar{display:none}
+.video-control{position:absolute;right:22px;bottom:22px;z-index:5;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.46);color:#fff;border-radius:999px;padding:9px 13px;font-weight:800;cursor:pointer}
+.page-transition{position:fixed;inset:0;z-index:2000;background:#07110e;pointer-events:none;opacity:0;transition:opacity .18s ease}.page-transition.is-active{opacity:1}
+img[loading="lazy"]{content-visibility:auto}
+@media(max-width:760px){.quote-form{grid-template-columns:1fr}.quote-form label.full,.quote-submit,.quote-note{grid-column:1}.quote-dialog{padding:28px 20px}.mobile-action-bar{position:fixed;z-index:55;display:grid;grid-template-columns:1fr 1fr;left:12px;right:12px;bottom:12px;border-radius:12px;overflow:hidden;box-shadow:0 15px 42px rgba(0,0,0,.28)}.mobile-action-bar a,.mobile-action-bar button{border:0;padding:13px 10px;text-align:center;font-weight:800;font-size:14px}.mobile-action-bar a{background:#07110e;color:#fff}.mobile-action-bar button{background:#e51b2a;color:#fff}.site-footer,footer{padding-bottom:92px!important}.page-anchor-nav{top:70px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.reveal-stagger>*,.ca-card-hover,.hero-media,.services-premium-video,.about-hero:before,.page-transition{transition:none!important;transform:none!important}.reveal,.reveal-stagger>*{opacity:1!important}.services-premium-video,video[autoplay]{display:none}}
+
+/* 2026 final consistency and fleet enhancements */
+.site-header{background:#05090c!important}
+.phone-stack{display:flex!important;flex-direction:column;align-items:center;line-height:1.05;text-align:center}
+.phone-stack small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-top:4px;color:rgba(255,255,255,.78)}
+.why-volvo-intro{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.18fr)!important;align-items:stretch!important}
+.why-volvo-intro>picture{display:block!important;min-width:0;height:100%}
+.why-volvo-main{display:block!important;width:100%!important;height:100%!important;min-height:440px!important;object-fit:cover!important;object-position:center!important}
+.fleet-intelligence{background:#f4f5f6}
+.fleet-intro-head{margin-bottom:36px}
+.premium-fleet-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.premium-fleet-card{background:#fff;border:1px solid rgba(8,20,29,.1);overflow:hidden;box-shadow:0 18px 45px rgba(8,20,29,.08)}
+.premium-fleet-card>img{display:block;width:100%;height:255px;object-fit:cover}
+.premium-fleet-body{padding:30px}
+.premium-fleet-body>span{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:50%;background:#e31b2b;color:#fff;font-size:12px;font-weight:800;margin-bottom:18px}
+.premium-fleet-body h3{font-size:25px;line-height:1.15;margin:0 0 14px;color:#08141d}
+.premium-fleet-body p{color:#4d5961;line-height:1.7}
+.premium-fleet-body ul{margin:18px 0 0;padding-left:18px;color:#26343d;line-height:1.65}
+.back-to-top{position:fixed;left:50%;bottom:28px;transform:translate(-50%,18px);z-index:90;width:48px;height:48px;border:0;border-radius:50%;display:grid;place-items:center;background:#e31b2b;color:#fff;box-shadow:0 14px 35px rgba(0,0,0,.28);opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s;cursor:pointer}
+.back-to-top.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.back-to-top svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.back-to-top:hover{transform:translate(-50%,-3px)}
+@media(max-width:900px){.premium-fleet-cards{grid-template-columns:1fr}.premium-fleet-card{display:grid;grid-template-columns:minmax(220px,.8fr) 1.2fr}.premium-fleet-card>img{height:100%;min-height:330px}.why-volvo-intro{grid-template-columns:1fr!important}.why-volvo-main{min-height:340px!important}}
+@media(max-width:700px){.phone-stack{display:none!important}.premium-fleet-card{display:block}.premium-fleet-card>img{height:230px;min-height:0}.back-to-top{bottom:76px}.why-volvo-main{min-height:280px!important}}
+
+/* Compact header actions and client portal */
+.nav-actions{gap:10px!important}
+.nav-actions .header-action-btn{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:9px 13px!important;border-radius:3px;font-size:11px!important;line-height:1;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.nav-actions .portal-btn{background:#fff;color:#101820;border:1px solid rgba(255,255,255,.85)}
+.nav-actions .portal-btn:hover{background:#f0f2f3;color:#101820}
+.nav-actions .header-quote-btn{background:var(--red,#e51b2a);color:#fff}
+@media(max-width:1080px){.nav-actions .header-action-btn{padding:8px 10px!important;font-size:10px!important}}
+@media(max-width:760px){.nav-actions .portal-btn{display:none}.nav-actions .header-action-btn{min-height:34px;padding:8px 10px!important}}
+
+/* Final fleet image alignment */
+.config>picture{display:block;width:100%;height:100%;min-width:0}.config>picture img{display:block;width:100%;height:100%;object-fit:cover}.why-volvo-intro>picture img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+
+
+/* Consistent subpage hero typography and positioning — Fleet page reference */
+body.page-about .about-hero,
+body.page-services .services-premium-hero,
+body.page-safety .hero,
+body.page-sustainability .hero {
+  min-height: 660px;
+  padding-top: 78px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+body.page-about .about-hero > .container,
+body.page-services .services-premium-content,
+body.page-safety .hero-content,
+body.page-sustainability .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 65px 0;
+  text-align: left;
+}
+body.page-about .about-hero > .container,
+body.page-services .services-premium-content {
+  max-width: var(--max, 1400px);
+  margin-left: auto;
+  margin-right: auto;
+}
+body.page-about .about-hero h1,
+body.page-about .about-hero p,
+body.page-about .about-kicker,
+body.page-about .about-red,
+body.page-services .services-premium-content h1,
+body.page-services .services-premium-content p,
+body.page-services .services-premium-content .eyebrow,
+body.page-services .services-premium-content .red-rule {
+  max-width: 570px;
+}
+
+body.page-about .about-hero h1,
+body.page-services .services-premium-content h1,
+body.page-safety .hero h1,
+body.page-sustainability .hero h1 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 66px;
+  font-weight: 700;
+  line-height: .97;
+  letter-spacing: -2.3px;
+  text-transform: uppercase;
+}
+
+body.page-about .about-kicker,
+body.page-services .services-premium-content .eyebrow {
+  margin-bottom: 10px;
+  color: var(--red, #e32636);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+body.page-about .about-hero p,
+body.page-services .services-premium-lead,
+body.page-safety .hero .lead,
+body.page-sustainability .hero-content > p:first-of-type {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 19px;
+  line-height: 1.52;
+}
+
+body.page-about .about-red,
+body.page-services .red-rule,
+body.page-safety .red-rule,
+body.page-sustainability .red-rule {
+  width: 68px;
+  height: 3px;
+  margin: 17px 0;
+  background: var(--red, #e32636);
+}
+
+@media (max-width: 700px) {
+  body.page-about .about-hero,
+  body.page-services .services-premium-hero,
+  body.page-safety .hero,
+  body.page-sustainability .hero {
+    min-height: 620px;
+    padding-top: 70px;
+    align-items: end;
+  }
+
+  body.page-about .about-hero > .container,
+  body.page-services .services-premium-content,
+  body.page-safety .hero-content,
+  body.page-sustainability .hero-content {
+    max-width: none;
+    padding: 260px 0 44px;
+    text-align: left;
+  }
+
+  body.page-about .about-hero h1,
+  body.page-services .services-premium-content h1,
+  body.page-safety .hero h1,
+  body.page-sustainability .hero h1 {
+    font-size: 48px;
+    letter-spacing: -1.3px;
+  }
+}
+
+/* Definitive Fleet Euro 6 label */
+.stat .euro6-label{white-space:nowrap;word-spacing:.08em}
+
+
+/* Web-ready additions */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.site-cta{background:#0c151b;color:#fff;padding:54px 0}.site-cta .site-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}.site-cta h2{margin:0 0 8px;font-size:clamp(30px,4vw,48px);text-transform:uppercase}.site-cta p{margin:0;color:#c7d0d5;max-width:760px;line-height:1.65}.site-cta-actions{display:flex;gap:12px;flex-wrap:wrap}.site-cta-actions a{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;border:1px solid rgba(255,255,255,.3);color:#fff}.site-cta-actions a:first-child{background:#e32636;border-color:#e32636}
+.trust-strip{padding:64px 0;background:#f4f6f7}.trust-strip h2{font-size:clamp(34px,4vw,52px);text-transform:uppercase;margin:8px 0 12px}.trust-strip p{color:#5d6870;max-width:760px;line-height:1.65}.trust-logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:28px}.trust-logo{min-height:92px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e1e6e8;padding:18px;text-align:center;font-weight:900;letter-spacing:.03em;color:#22313b;font-size:clamp(15px,1.6vw,21px)}.trust-logo img{display:block;width:100%;height:64px;object-fit:contain;object-position:center}
+.form-page{padding:70px 0 90px;background:#f4f6f7}.form-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}.form-intro h2{font-size:clamp(36px,4vw,56px);text-transform:uppercase;margin:10px 0 18px}.form-intro p{color:#536069;line-height:1.75}.web-form{background:#fff;border:1px solid #dde4e7;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.web-form label{display:grid;gap:7px;font-weight:800;font-size:13px;text-transform:uppercase;color:#26343d}.web-form input,.web-form select,.web-form textarea{width:100%;border:1px solid #cfd8dc;background:#fff;padding:13px 14px;font:inherit;color:#15232c}.web-form textarea{min-height:150px;resize:vertical}.web-form .full{grid-column:1/-1}.web-form button{grid-column:1/-1;background:#e32636;color:#fff;border:0;padding:15px 20px;font-weight:900;text-transform:uppercase;cursor:pointer}.form-note{grid-column:1/-1;margin:0;color:#68757d;font-size:13px;line-height:1.5}.career-benefits{padding:72px 0}.career-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.career-card{border:1px solid #e0e5e8;padding:26px;background:#fff}.career-card h3{text-transform:uppercase;margin:0 0 10px}.career-card p{color:#5c6971;line-height:1.65;margin:0}.career-hero,.contact-hero{min-height:470px;display:flex;align-items:end;color:#fff;padding:140px 0 70px;background-position:center;background-size:cover}.career-hero{background-image:linear-gradient(90deg,rgba(4,10,14,.94),rgba(4,10,14,.72) 50%,rgba(4,10,14,.26)),url('../images/careers-hero-sharp.jpg')}.contact-hero{background-image:linear-gradient(90deg,rgba(4,10,14,.94),rgba(4,10,14,.72) 50%,rgba(4,10,14,.26)),url('../images/fleet-hero-night-yard.webp')}.career-hero h1,.contact-hero h1{font-size:clamp(52px,7vw,96px);line-height:.92;text-transform:uppercase;margin:0 0 18px}.career-hero p,.contact-hero p{max-width:680px;font-size:20px;line-height:1.55;color:#e4eaed}
+@media(max-width:1000px){.trust-logos{grid-template-columns:repeat(3,1fr)}.form-layout{grid-template-columns:1fr}.career-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.site-cta .site-cta-inner{display:block}.site-cta-actions{margin-top:22px}.trust-logos{grid-template-columns:repeat(2,1fr)}.web-form{grid-template-columns:1fr;padding:22px}.web-form .full,.web-form button,.form-note{grid-column:1}.career-grid{grid-template-columns:1fr}}
+
+/* Mobile navigation reliability: consistent on every page, including video heroes. */
+.video-control{display:none!important}
+@media(max-width:1080px){
+  .site-header{overflow:visible!important;z-index:100!important}
+  .site-header .nav{position:relative;overflow:visible!important}
+  .site-header .menu-btn{display:flex!important;align-items:center;justify-content:center;position:relative;z-index:103;width:44px;height:44px;padding:0;line-height:1;color:#fff!important}
+  .site-header .nav-links{display:none!important;position:absolute!important;top:78px!important;left:0!important;right:0!important;z-index:102!important;margin:0!important;padding:14px 22px 20px!important;background:#07100d!important;border-top:1px solid rgba(255,255,255,.12);box-shadow:0 18px 40px rgba(0,0,0,.3);transform:none!important;opacity:1!important;visibility:visible!important}
+  .site-header .nav.open .nav-links{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
+  .site-header .nav.open .nav-links a{display:block!important;width:100%;padding:13px 0!important;border-bottom:1px solid rgba(255,255,255,.08)}
+  body.menu-open{overflow:hidden}
+}
+@media(max-width:760px){
+  .site-header{height:68px!important}
+  .site-header .nav{height:68px!important}
+  .site-header .brand img{height:38px!important}
+  .site-header .nav-links{top:68px!important;max-height:calc(100vh - 68px);overflow-y:auto}
+  .site-header .nav-actions{margin-left:auto;gap:8px!important}
+  .site-header .phone,.site-header .header-action-btn{display:none!important}
+}
+
+
+/* 2026 iPhone flow refinement — desktop presentation is intentionally unchanged. */
+.menu-btn::before,.menu-btn::after,.menu-btn{--menu-line:24px}
+.menu-btn{position:relative;font-size:0!important;background:transparent;border:0;cursor:pointer}
+.menu-btn::before,.menu-btn::after{content:"";position:absolute;left:50%;width:var(--menu-line);height:2px;background:currentColor;border-radius:2px;transform:translateX(-50%);transition:transform .2s cubic-bezier(.2,.7,.2,1),top .2s cubic-bezier(.2,.7,.2,1)}
+.menu-btn::before{top:17px;box-shadow:0 7px 0 currentColor}.menu-btn::after{top:31px}
+.nav.open .menu-btn::before{top:22px;box-shadow:none;transform:translateX(-50%) rotate(45deg)}
+.nav.open .menu-btn::after{top:22px;transform:translateX(-50%) rotate(-45deg)}
+@media(max-width:1080px){
+  .site-header .nav-links{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(-10px)!important;transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s!important}
+  .site-header .nav.open .nav-links{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important;transition:opacity .2s ease,transform .2s ease!important}
+  .site-header .nav-links a{opacity:0;transform:translateY(-4px);transition:opacity .15s ease,transform .15s ease,background .15s ease}
+  .site-header .nav.open .nav-links a{opacity:1;transform:none}
+  .site-header .nav.open .nav-links a:nth-child(2){transition-delay:.02s}.site-header .nav.open .nav-links a:nth-child(3){transition-delay:.04s}.site-header .nav.open .nav-links a:nth-child(4){transition-delay:.06s}.site-header .nav.open .nav-links a:nth-child(5){transition-delay:.08s}.site-header .nav.open .nav-links a:nth-child(6){transition-delay:.10s}.site-header .nav.open .nav-links a:nth-child(7){transition-delay:.12s}
+}
+@media(max-width:760px){
+  :root{--mobile-section-space:58px}
+  body{padding-bottom:0}
+  .container{width:calc(100% - 36px)!important}
+  main section:not(.hero):not(.about-hero):not(.services-premium-hero):not(.career-hero):not(.contact-hero){padding-top:var(--mobile-section-space);padding-bottom:var(--mobile-section-space)}
+  h1{font-size:clamp(38px,11vw,50px)!important;line-height:.98!important;letter-spacing:-1.2px!important}
+  h2{font-size:clamp(29px,8vw,38px)!important;line-height:1.04!important;letter-spacing:-.7px!important}
+  h3{line-height:1.16}
+  p{line-height:1.58}
+
+  /* Shorter mobile heroes with safer focal positioning. */
+  body.page-about .about-hero,body.page-services .services-premium-hero,body.page-safety .hero,body.page-sustainability .hero,
+  .career-hero,.contact-hero{min-height:500px!important;height:auto!important;padding-top:68px!important;align-items:flex-end!important}
+  body.page-about .about-hero>.container,body.page-services .services-premium-content,body.page-safety .hero-content,body.page-sustainability .hero-content,
+  .career-hero>.container,.contact-hero>.container{padding:120px 0 38px!important;width:calc(100% - 36px)!important}
+  body.page-sustainability .hero-content{padding-top:190px!important}
+  body.page-sustainability .hero-video{object-position:62% center!important}
+  body.page-services .services-premium-video{object-position:58% center!important}
+  body.page-about .about-hero{background-position:58% center!important}
+  body.page-safety .hero-media,body.page-safety .hero img{object-position:58% center!important}
+
+  /* Reduce oversized media while retaining full-width impact. */
+  main img:not(.brand img):not(.footer-logo):not(.trust-logos img){max-height:360px;object-fit:cover}
+  .split img,.feature img,.config img,.why-volvo-main,.premium-fleet-card>img,.leadership-group img{height:260px!important;min-height:0!important;object-position:center!important}
+  .leader-card img,.leadership-card img{height:300px!important;object-position:center top!important}
+  .material-card img,.service-card img,.career-card img{height:210px!important}
+  .premium-fleet-body,.leadership-group-copy,.card-body{padding:24px!important}
+  .premium-fleet-cards,.cards,.cards-3,.career-grid,.service-grid,.topic-grid,.pillars{gap:16px!important}
+
+  /* Compact sticky horizontal page navigation. */
+  .page-anchor-nav .anchor-inner{padding:7px 0!important;gap:6px!important}
+  .page-anchor-nav a{padding:7px 11px!important;font-size:10px!important}
+
+  /* Quote enquiry becomes a compact, native-feeling bottom sheet. */
+  .quote-modal{place-items:end center!important;padding:0!important}
+  .quote-modal-backdrop{backdrop-filter:blur(4px)}
+  .quote-dialog{width:100%!important;max-height:88dvh!important;border-radius:18px 18px 0 0!important;padding:24px 18px calc(22px + env(safe-area-inset-bottom))!important;box-shadow:0 -18px 60px rgba(0,0,0,.34)!important}
+  .quote-dialog h2{font-size:28px!important;padding-right:44px;margin-bottom:4px!important}
+  .quote-dialog>p{font-size:13px;margin-bottom:16px!important}
+  .quote-close{top:14px!important;right:14px!important;width:36px!important;height:36px!important}
+  .quote-form{gap:11px!important}
+  .quote-form label{gap:5px!important;font-size:11px!important}
+  .quote-form input,.quote-form select,.quote-form textarea{padding:10px 11px!important;border-radius:7px!important;font-size:16px!important}
+  .quote-form textarea{min-height:82px!important}
+  .quote-submit{padding:13px 16px!important}
+  .quote-note{font-size:10px!important}
+
+  /* Faster, calmer page transitions and reveals on small screens. */
+  .reveal{transform:translateY(10px);transition-duration:.38s}.reveal-stagger>*{transform:translateY(8px);transition-duration:.34s}
+  .page-transition{transition-duration:.11s}
+  .mobile-action-bar{left:10px!important;right:10px!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;border-radius:10px!important}
+  .mobile-action-bar a,.mobile-action-bar button{padding:12px 8px!important;font-size:13px!important}
+  .back-to-top{bottom:calc(70px + env(safe-area-inset-bottom))!important}
+}
+@media(max-width:390px){
+  body.page-about .about-hero,body.page-services .services-premium-hero,body.page-safety .hero,body.page-sustainability .hero,.career-hero,.contact-hero{min-height:470px!important}
+  .leader-card img,.leadership-card img{height:280px!important}
+}
+
+
+/* 2026 premium refinement pass: mobile economy, customer logos, national capability, safety assurance */
+.national-capability-note{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:7px 11px;border:1px solid rgba(255,255,255,.28);background:rgba(5,13,17,.22);backdrop-filter:blur(3px);color:#fff;font-size:10px;line-height:1.2;letter-spacing:.08em;text-transform:uppercase}
+.national-capability-note strong{font-size:10px;letter-spacing:.12em}
+.national-capability-note span{color:rgba(255,255,255,.76);white-space:nowrap}
+
+/* Equal visual weight for customer identities; full colour returns on deliberate desktop hover. */
+.trust-logo{min-height:88px;padding:16px 20px;transition:border-color .2s ease,background .2s ease}
+.trust-logo img{height:50px!important;width:88%!important;max-width:190px!important;object-fit:contain!important;filter:grayscale(1) saturate(0);opacity:.72;transition:filter .22s ease,opacity .22s ease,transform .22s ease}
+@media(hover:hover) and (pointer:fine){.trust-logo:hover{border-color:#c8d0d4}.trust-logo:hover img{filter:none;opacity:1;transform:scale(1.025)}}
+
+/* Safety page: evidence-led operational assurance. */
+.safety-assurance{padding:54px 0;background:#f4f6f7;border-top:1px solid #e1e5e7;border-bottom:1px solid #e1e5e7}
+.safety-assurance .assurance-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(320px,1.2fr);column-gap:56px;align-items:end;margin-bottom:26px}
+.safety-assurance .assurance-head .eyebrow{grid-column:1/-1;margin-bottom:7px}
+.safety-assurance .assurance-head h2{margin:0;font-size:clamp(32px,3.2vw,46px);line-height:1.02;text-transform:uppercase;letter-spacing:-.8px}
+.safety-assurance .assurance-head p{margin:0;color:#5a666d;line-height:1.65;max-width:640px}
+.safety-assurance .assurance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.safety-assurance .assurance-grid article{background:#fff;border:1px solid #dde3e6;padding:20px;min-height:180px}
+.safety-assurance .assurance-grid article>span{display:block;color:#e32636;font-size:11px;font-weight:900;letter-spacing:.14em;margin-bottom:18px}
+.safety-assurance .assurance-grid h3{margin:0 0 8px;text-transform:uppercase;font-size:15px;line-height:1.15}
+.safety-assurance .assurance-grid p{margin:0;color:#5a666d;font-size:13px;line-height:1.55}
+
+@media(max-width:1000px){.safety-assurance .assurance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Dedicated phone pass: less scrolling, smaller repetitive media, denser cards. Desktop is untouched. */
+@media(max-width:760px){
+  :root{--mobile-section-space:48px}
+  .national-capability-note{margin-top:13px;padding:6px 8px;gap:7px;font-size:8.5px;max-width:100%}
+  .national-capability-note strong{font-size:8.5px}.national-capability-note span{font-size:8px;white-space:normal}
+
+  /* About values: compact two-up scan rather than four tall rows. */
+  body.page-about .about-value-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  body.page-about .about-value{padding:15px!important;min-height:0!important}
+  body.page-about .about-value h3{font-size:14px!important;margin-bottom:6px!important}
+  body.page-about .about-value p{font-size:11.5px!important;line-height:1.45!important}
+
+  /* Services capability cards: two-up and tighter; materials keep their established two-column catalogue. */
+  body.page-services .services-four-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  body.page-services .services-four-grid article{padding:14px 10px!important;min-height:0!important}
+  body.page-services .services-line-icon{margin-bottom:8px!important}
+  body.page-services .services-line-icon svg{width:48px!important;height:48px!important}
+  body.page-services .services-four-grid h3{font-size:13px!important;line-height:1.18!important;margin:0 0 6px!important}
+  body.page-services .services-four-grid p{font-size:11px!important;line-height:1.45!important;margin:0!important}
+
+  /* Fleet technology: turn photo-heavy cards into compact horizontal modules. */
+  body.page-fleet .why-volvo-features{display:grid!important;grid-template-columns:1fr!important;gap:11px!important}
+  body.page-fleet .why-volvo-card{display:grid!important;grid-template-columns:34% 66%!important;align-items:stretch!important;overflow:hidden!important}
+  body.page-fleet .why-volvo-card>picture{height:100%!important;min-height:188px!important}
+  body.page-fleet .why-volvo-card>picture img{width:100%!important;height:100%!important;min-height:188px!important;object-fit:cover!important;max-height:none!important}
+  body.page-fleet .why-volvo-card-body{padding:14px!important}
+  body.page-fleet .why-volvo-card-body h3{font-size:15px!important;margin:0 0 5px!important}
+  body.page-fleet .why-volvo-card-body p,body.page-fleet .why-volvo-card-body li{font-size:10.5px!important;line-height:1.4!important}
+  body.page-fleet .why-volvo-card-body ul{margin:7px 0 0!important;padding-left:15px!important}
+  body.page-fleet .premium-fleet-card>img{height:190px!important}
+  body.page-fleet .premium-fleet-body{padding:18px!important}
+  body.page-fleet .premium-fleet-body p,body.page-fleet .premium-fleet-body li{font-size:11.5px!important;line-height:1.48!important}
+
+  /* Safety delivery controls: image and evidence sit side-by-side instead of stacking into long cards. */
+  body.page-safety .control-grid{gap:11px!important}
+  body.page-safety .control{display:grid!important;grid-template-columns:36% 64%!important;align-items:stretch!important;overflow:hidden!important}
+  body.page-safety .control>img,body.page-safety .control>picture{height:100%!important;min-height:205px!important;margin:0!important}
+  body.page-safety .control>picture img{width:100%!important;height:100%!important;min-height:205px!important;max-height:none!important;object-fit:cover!important}
+  body.page-safety .control-copy{padding:15px!important}
+  body.page-safety .control-copy h3{font-size:14px!important;margin:0 0 6px!important}
+  body.page-safety .control-copy p,body.page-safety .control-copy li{font-size:10.5px!important;line-height:1.42!important}
+  body.page-safety .control-copy ul{margin:7px 0 0!important;padding-left:15px!important}
+  .safety-assurance{padding:42px 0!important}
+  .safety-assurance .assurance-head{display:block;margin-bottom:18px}
+  .safety-assurance .assurance-head h2{font-size:27px!important;margin-bottom:8px}
+  .safety-assurance .assurance-head p{font-size:12px;line-height:1.5}
+  .safety-assurance .assurance-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .safety-assurance .assurance-grid article{padding:14px!important;min-height:0!important}
+  .safety-assurance .assurance-grid article>span{margin-bottom:9px;font-size:9px}
+  .safety-assurance .assurance-grid h3{font-size:12px!important;margin-bottom:5px}
+  .safety-assurance .assurance-grid p{font-size:10.5px;line-height:1.42}
+
+  /* Careers benefits scan in two columns on phones. */
+  body.page-careers .career-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  body.page-careers .career-card{padding:15px!important;min-height:0!important}
+  body.page-careers .career-card h3{font-size:13px!important;margin-bottom:6px!important}
+  body.page-careers .career-card p{font-size:11px!important;line-height:1.45!important}
+
+  /* Customer logos remain visually restrained on phones. */
+  .trust-strip{padding:48px 0!important}.trust-logo{min-height:72px!important;padding:12px!important}.trust-logo img{height:40px!important;width:86%!important;filter:grayscale(1) saturate(0);opacity:.78}
+}
+@media(max-width:390px){
+  body.page-fleet .why-volvo-card{grid-template-columns:32% 68%!important}
+  body.page-safety .control{grid-template-columns:34% 66%!important}
+}
+
+/* Careers form upload safeguards */
+.netlify-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.file-help{display:block;margin-top:7px;color:#68747b;font-size:13px;line-height:1.45;font-weight:500}
+.form-optional{font-weight:500;color:#758088;font-size:.9em}
+.careers-form-status{min-height:1.5em;margin:12px 0 0;color:#1d4f3e;font-weight:700;line-height:1.45}
+.netlify-careers-form button[disabled]{opacity:.65;cursor:wait}
+
+
+/* 2026-09-03 unified master header — identical on every page. */
+.ca-global-header{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;
+  z-index:1200!important;
+  height:82px!important;
+  background:#05090c!important;
+  border-bottom:1px solid rgba(255,255,255,.12)!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  overflow:visible!important;
+  transition:
+    height .34s cubic-bezier(.22,.75,.22,1),
+    box-shadow .34s cubic-bezier(.22,.75,.22,1),
+    background-color .34s ease!important;
+  will-change:height;
+}
+.ca-global-header .nav-shell{
+  width:min(1400px,calc(100% - 96px));
+  height:82px!important;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  position:relative;
+  overflow:visible!important;
+  transition:height .34s cubic-bezier(.22,.75,.22,1)!important;
+}
+.ca-global-header .brand{display:flex;align-items:center;flex:0 0 auto}
+.ca-global-header .brand img,
+.ca-global-header .logo{
+  display:block!important;
+  width:auto!important;
+  height:47px!important;
+  max-height:none!important;
+  filter:brightness(0) invert(1)!important;
+  transition:height .34s cubic-bezier(.22,.75,.22,1)!important;
+}
+.ca-global-header .nav-links{
+  display:flex;
+  align-items:center;
+  gap:27px;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.ca-global-header .nav-links a{
+  position:relative;
+  display:flex;
+  align-items:center;
+  height:82px;
+  padding:0!important;
+  opacity:.92;
+  transition:height .34s cubic-bezier(.22,.75,.22,1),opacity .18s ease,color .18s ease!important;
+}
+.ca-global-header .nav-links a:hover,
+.ca-global-header .nav-links a.active{opacity:1}
+.ca-global-header .nav-links a.active:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:10px;
+  height:2px;
+  background:var(--red,#e51b2a);
+  transition:bottom .34s cubic-bezier(.22,.75,.22,1)!important;
+}
+.ca-global-header .nav-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  margin-left:auto;
+}
+.ca-global-header .phone-stack{display:flex;flex-direction:column;align-items:center;line-height:1.05;gap:3px;white-space:nowrap}
+.ca-global-header .phone-stack small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);font-weight:800}
+.ca-global-header .header-action-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 19px!important;
+  line-height:1;
+  border-radius:0;
+  white-space:nowrap;
+  transition:min-height .34s cubic-bezier(.22,.75,.22,1),padding .34s cubic-bezier(.22,.75,.22,1),background .18s ease,border-color .18s ease!important;
+}
+.ca-global-header .header-quote-btn{background:var(--red,#e51b2a);color:#fff}
+.ca-global-header .portal-btn{border:1px solid rgba(255,255,255,.44);color:#fff;background:transparent}
+.ca-global-header.is-scrolled{
+  height:68px!important;
+  background:#05090c!important;
+  box-shadow:0 9px 28px rgba(0,0,0,.22)!important;
+}
+.ca-global-header.is-scrolled .nav-shell{height:68px!important}
+.ca-global-header.is-scrolled .brand img,
+.ca-global-header.is-scrolled .logo{height:39px!important}
+.ca-global-header.is-scrolled .nav-links a{height:68px!important}
+.ca-global-header.is-scrolled .nav-links a.active:after{bottom:7px}
+.ca-global-header.is-scrolled .header-action-btn{min-height:40px;padding-left:17px!important;padding-right:17px!important}
+
+/* No secondary/breadcrumb navigation bars beneath the main header. */
+.breadcrumb,.page-anchor-nav{display:none!important}
+
+@media(max-width:1180px){
+  .ca-global-header .nav-links{gap:18px}
+  .ca-global-header .header-phone{display:none!important}
+}
+@media(max-width:1080px){
+  .ca-global-header .nav-shell{width:min(100% - 44px,920px)}
+  .ca-global-header .menu-btn{display:flex!important;align-items:center;justify-content:center;position:relative;z-index:1203;width:44px;height:44px;padding:0;line-height:1;color:#fff!important;flex:0 0 auto}
+  .ca-global-header .nav-actions{gap:10px}
+  .ca-global-header .nav-actions .header-action-btn{display:none!important}
+  .ca-global-header .nav-links{
+    display:flex!important;
+    position:absolute!important;
+    top:82px!important;left:0!important;right:0!important;
+    z-index:1202!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:0!important;
+    margin:0!important;
+    padding:14px 22px 20px!important;
+    background:#07100d!important;
+    border-top:1px solid rgba(255,255,255,.12);
+    box-shadow:0 18px 40px rgba(0,0,0,.3);
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+    transform:translateY(-10px)!important;
+    transition:top .34s cubic-bezier(.22,.75,.22,1),opacity .18s ease,transform .18s ease,visibility 0s linear .18s!important;
+    max-height:calc(100vh - 82px)!important;
+    overflow-y:auto;
+  }
+  .ca-global-header .nav.open .nav-links{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important;transition:top .34s cubic-bezier(.22,.75,.22,1),opacity .2s ease,transform .2s ease!important}
+  .ca-global-header .nav-links a,
+  .ca-global-header.is-scrolled .nav-links a{height:auto!important;padding:13px 0!important;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ca-global-header .nav-links a.active:after{display:none}
+  .ca-global-header.is-scrolled .nav-links{top:68px!important;max-height:calc(100vh - 68px)!important}
+}
+@media(max-width:700px){
+  .ca-global-header{height:70px!important}
+  .ca-global-header .nav-shell{height:70px!important;width:calc(100% - 32px)}
+  .ca-global-header .brand img,.ca-global-header .logo{height:38px!important}
+  .ca-global-header .nav-links{top:70px!important;max-height:calc(100vh - 70px)!important}
+  .ca-global-header.is-scrolled{height:62px!important}
+  .ca-global-header.is-scrolled .nav-shell{height:62px!important}
+  .ca-global-header.is-scrolled .brand img,.ca-global-header.is-scrolled .logo{height:34px!important}
+  .ca-global-header.is-scrolled .nav-links{top:62px!important;max-height:calc(100vh - 62px)!important}
+}
