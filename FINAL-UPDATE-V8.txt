@@ -1,0 +1,8 @@
+Final update based on cartage-australia-website-final-v7.zip
+
+- Removed Paul Charalambous, Jed Vella and Danial Cauchi from About Us.
+- Rebalanced the page to retain the existing three-person executive row and centred two-person senior row.
+- Replaced Safety & Compliance Volvo FM/FMX image with Truck in tunnel.jpg.
+- Replaced Fleet A-Double image with supplied A double.png and applied a subtle dusk colour grade.
+- Replaced Fleet Reliability, Safety & Performance image with Reliability.jpg.
+- Preserved existing layout, crop behaviour and responsive sizing.

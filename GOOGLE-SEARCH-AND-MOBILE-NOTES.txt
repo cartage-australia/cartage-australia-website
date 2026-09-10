@@ -1,0 +1,19 @@
+CARTAGE AUSTRALIA — MOBILE + GOOGLE SEARCH UPDATE
+
+MOBILE
+- Desktop rules remain unchanged; refinements apply at 760px and below.
+- Shorter hero sections and tighter section spacing reduce scrolling.
+- Mobile image heights and focal positions reduce severe cropping.
+- Quote form is now a compact bottom sheet.
+- Menu uses a smooth hamburger-to-close animation and staggered links.
+- Reveal and page-transition motion is calmer and faster.
+
+GOOGLE SEARCH
+- Internal navigation now uses clean canonical URLs.
+- Netlify redirects resolve those clean URLs and permanently redirect legacy .html URLs.
+- Homepage now includes WebSite and SiteNavigationElement structured data.
+- Existing unique page titles, descriptions, breadcrumbs, canonical tags, sitemap and robots.txt are retained.
+- Sitemap lastmod dates and page priorities are updated.
+
+IMPORTANT
+Google sitelinks are selected automatically. These changes create the structure Google recommends, but no website can force or guarantee that sitelinks will appear. After publishing, verify the domain in Google Search Console, submit sitemap.xml, and request indexing for the homepage and principal pages.

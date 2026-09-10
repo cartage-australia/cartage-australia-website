@@ -1,0 +1,8 @@
+PERMANENT HEADER UPDATE
+
+- The master black header now uses fixed dimensions on every production page.
+- Scroll-based header shrinking has been removed to eliminate layout movement when changing pages.
+- Get a Quote and Client Portal use fixed widths so their positions do not change between pages.
+- Header typography is explicitly standardised to avoid page-specific font metrics shifting controls.
+- Homepage magnetic button interaction excludes header controls.
+- Client Portal destination is standardised as https://portal.cartageaustralia.com/

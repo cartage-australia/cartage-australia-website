@@ -1,0 +1,1 @@
+Services material cards standardized to six individual 1200x800 images; Flexible Solutions image flipped and positioned so the full truck remains visible; homepage header aligned to subpage navigation spacing.

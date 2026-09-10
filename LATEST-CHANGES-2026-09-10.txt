@@ -1,0 +1,6 @@
+Latest updates applied:
+1. Fleet page configuration cards widened so trailer photos have more width and use contain-fit styling to keep full trailers visible.
+2. Safety & Compliance page: replaced the image for Chain of Responsibility and Incident management with the provided Cartage Australia supervisor image.
+3. Fleet page hero updated from a static image to a compressed MP4 video for faster loading.
+4. Home page Modern Fleet / Serious Capability image replaced with the provided truck-and-trailer yard photo.
+5. Existing prior updates retained, including About header image and Services header video updates.

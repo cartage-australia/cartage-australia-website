@@ -1,0 +1,5 @@
+index.html: img tags=8, embedded images=0, remote approved images=6, missing local files=[]
+fleet.html: img tags=9, embedded images=0, remote approved images=5, missing local files=[]
+sustainability.html: img tags=2, embedded images=5, remote approved images=0, missing local files=[]
+safety-compliance.html: img tags=10, embedded images=13, remote approved images=0, missing local files=[]
+assets/css/style.css missing local files=[]

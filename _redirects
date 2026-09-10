@@ -1,0 +1,23 @@
+# Clean public URLs rewrite to static HTML files without redirect loops.
+/about /about.html 200
+/about/ /about.html 200
+/services /services.html 200
+/services/ /services.html 200
+/fleet /fleet.html 200
+/fleet/ /fleet.html 200
+/sustainability /sustainability.html 200
+/sustainability/ /sustainability.html 200
+/safety-compliance /safety-compliance.html 200
+/safety-compliance/ /safety-compliance.html 200
+/careers /careers.html 200
+/careers/ /careers.html 200
+/contact /contact.html 200
+/contact/ /contact.html 200
+
+/forms /forms.html 200
+/forms/ /forms.html 200
+
+/client-portal /client-portal.html 200
+/client-portal/ /client-portal.html 200
+
+/* /404.html 404

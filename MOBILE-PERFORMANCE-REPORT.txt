@@ -1,0 +1,19 @@
+CARTAGE AUSTRALIA WEBSITE - MOBILE PERFORMANCE BUILD
+
+Completed
+- All original images and videos retained unchanged as fallbacks.
+- Embedded media extracted from HTML without recompression.
+- Responsive high-quality WebP files added for mobile, tablet and desktop delivery.
+- HTML updated with picture/srcset, lazy loading, async decoding and priority loading for hero/logo imagery.
+- Videos use metadata preloading while retaining existing playback behaviour.
+- Browser caching and text compression rules added.
+- No design, written content or functionality intentionally changed.
+
+Build summary
+- Source image sets: 55
+- Responsive WebP files: 140
+- Extracted embedded media: 25
+- Missing local references: 0
+
+Deployment
+Upload the contents of this folder to the website root, preserving the folder structure.

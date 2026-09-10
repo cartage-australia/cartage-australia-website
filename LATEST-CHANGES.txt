@@ -1,0 +1,11 @@
+Latest update:
+- Replaced Fleet A-Double image with the supplied dusk photograph.
+- Replaced the browser-tab logo with a simple navy C favicon.
+- Slightly increased Services material-description text size.
+- No other website content or layout was changed.
+
+2026-09-02
+- Homepage primary headline restored to solid white; secondary line remains outlined.
+- All subpage headers fixed as solid black bars with a smaller scroll state.
+- Removed visible on-page anchor submenus from all subpages.
+- Reduced individual About Us leadership profile photos by 20%.

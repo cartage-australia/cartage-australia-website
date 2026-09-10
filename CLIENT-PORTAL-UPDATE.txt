@@ -1,0 +1,11 @@
+CLIENT PORTAL UPDATE
+
+- Added client-portal.html as the new branded front-facing login page.
+- All existing Client Portal links now point to the new local page.
+- Login credentials are POSTed directly over HTTPS to https://portal.cartageaustralia.com/login/.
+- Field names mirror the existing portal: log, pwd, rememberme, redirect_to.
+- Existing redirect target retained: https://portal.cartageaustralia.com/wp-admin/.
+- Added clean Netlify routes for /client-portal and /client-portal/.
+- Login page is noindex/nofollow.
+
+Important: if the legacy WordPress portal rejects a login, its own error page may still be shown because authentication remains hosted there. Successful authentication should continue into the existing portal workflow.

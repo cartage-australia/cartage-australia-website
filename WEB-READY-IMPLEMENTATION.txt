@@ -1,0 +1,20 @@
+Cartage Australia web-ready implementation
+
+Included:
+- Unique titles and descriptions across all pages
+- Open Graph and social sharing tags
+- Canonical URLs and structured Schema.org data
+- One H1 per page and improved semantic hierarchy
+- Consistent Australia-wide CTA sections
+- Trust/customer logo strip on About Us
+- New Careers page linked from the homepage careers section
+- New routed Contact page for quotes, materials, careers, accounts and general enquiries
+- WebP versions of suitable imagery, with source files retained
+- Updated sitemap, robots.txt and clean-route rules
+
+Trust logos were placed on About Us, immediately after the leadership section, to build credibility without crowding the homepage.
+
+Static forms prepare an email in the visitor's email application. A production form endpoint or CRM integration is still required for direct server-side submissions.
+
+Audit issues:
+None detected.

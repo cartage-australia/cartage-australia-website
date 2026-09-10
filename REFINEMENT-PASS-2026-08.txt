@@ -1,0 +1,11 @@
+Cartage Australia refinement pass
+
+Implemented:
+- Mobile scroll-economy refinements for About, Services, Fleet, Safety and Careers.
+- Premium equal-weight customer logo treatment on About Us.
+- Safety & Compliance operational-assurance evidence section using existing site claims only.
+- Subtle Australia-wide capability treatment across key subpage heroes.
+- One consistent primary navigation set across production pages; Careers remains accessible from homepage/footer but is not in the main header.
+- Removed duplicate services-standalone.html and sustainability-standalone.html production variants.
+
+Desktop layout is intentionally preserved except for the new Safety assurance section, customer-logo styling and subtle national capability note.

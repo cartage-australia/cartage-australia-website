@@ -1,0 +1,17 @@
+CARTAGE AUSTRALIA - MOBILE UX REVIEW
+
+Implemented in this build
+- Reduced the five leadership profile areas by 18% while preserving portrait proportions.
+- Rebuilt the mobile navigation behaviour so the menu works consistently on every page.
+- Ensured the Sustainability menu button remains visible over the video hero.
+- Removed the generated Pause Video controls from Services and Sustainability.
+
+Recommended next mobile refinement pass
+1. Reduce subpage hero heights by approximately 15-20% below 760px to expose page content sooner.
+2. Give key hero and feature images dedicated mobile object-position values so truck cabins and subjects are not cropped.
+3. Reduce vertical section padding from typical desktop values of 80-100px to 48-60px on phones.
+4. Replace the full-screen quote modal on phones with a compact bottom sheet or a short first-step form, followed by optional project details.
+5. Use a restrained 180-220ms menu transition with a small vertical movement and opacity fade; avoid large sliding or bouncing motion.
+6. Collapse long card grids into two-column compact cards where text remains legible, and one column only for content-heavy cards.
+7. Shorten repetitive introductory paragraphs on mobile with an optional Read more control.
+8. Check each page at 390px and 430px widths, plus landscape orientation, before publishing updates.

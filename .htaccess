@@ -1,0 +1,33 @@
+RewriteEngine On
+RewriteRule ^company/?$ /about-us/ [R=301,L]
+RewriteRule ^about\.html$ /about-us/ [R=301,L]
+RewriteRule ^services\.html$ /services/ [R=301,L]
+RewriteRule ^fleet\.html$ /fleet/ [R=301,L]
+RewriteRule ^sustainability\.html$ /sustainability/ [R=301,L]
+RewriteRule ^safety-compliance\.html$ /safety-compliance/ [R=301,L]
+ErrorDocument 404 /404.html
+# Mobile performance caching and compression
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType video/mp4 "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^services/?$ services.html [L]
+RewriteRule ^fleet/?$ fleet.html [L]
+RewriteRule ^sustainability/?$ sustainability.html [L]
+RewriteRule ^safety-compliance/?$ safety-compliance.html [L]
+RewriteRule ^careers/?$ careers.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+</IfModule>

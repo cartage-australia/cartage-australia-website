@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="robots" content="noindex,nofollow,noarchive"/>
+<meta name="theme-color" content="#05090c"/>
+<title>Client Portal | Cartage Australia</title>
+<link rel="icon" href="assets/images/favicon-32.png" sizes="32x32"/>
+<style>
+:root{--ink:#07111b;--red:#e32636;--muted:#5d6670;--line:#d9dee4;--shadow:0 28px 70px rgba(0,0,0,.28)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:#07111b;color:var(--ink)}
+body{min-height:100svh;overflow-x:hidden}
+.portal-stage{position:relative;min-height:100svh;display:grid;place-items:center;padding:38px 22px;background:#07111b url('assets/images/client-portal-hero.webp') center center/cover no-repeat;isolation:isolate}
+.portal-stage::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,12,.34),rgba(3,8,12,.48));z-index:-1}
+.portal-stage::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.06),rgba(0,0,0,.16) 50%,rgba(0,0,0,.36) 100%);z-index:-1}
+.back-link{position:absolute;top:24px;left:28px;color:#fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;opacity:.9;transition:opacity .18s ease}
+.back-link:hover{opacity:1}
+.login-card{width:min(440px,calc(100vw - 36px));background:#fff;border-radius:6px;padding:42px 44px 36px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6)}
+.login-logo{display:block;width:min(275px,86%);height:auto;margin:0 auto 30px}
+.login-kicker{text-align:center;color:var(--red);text-transform:uppercase;font-size:11px;font-weight:900;letter-spacing:.18em;margin-bottom:9px}
+h1{text-align:center;font-size:28px;line-height:1.12;margin:0 0 8px;letter-spacing:-.03em}
+.login-intro{text-align:center;color:var(--muted);font-size:14px;line-height:1.55;margin:0 auto 27px;max-width:310px}
+.field{display:block;margin-bottom:18px}
+.field-label{display:block;font-size:12px;font-weight:800;letter-spacing:.025em;margin-bottom:8px;color:#1c2731}
+.input-wrap{position:relative}
+input[type=email],input[type=password],input[type=text]{width:100%;height:52px;border:1px solid var(--line);border-radius:3px;background:#fff;padding:0 14px;font:inherit;font-size:15px;color:var(--ink);outline:none;transition:border-color .16s ease,box-shadow .16s ease}
+input[type=password],.password-visible{padding-right:58px!important}
+input:focus{border-color:#7a858f;box-shadow:0 0 0 3px rgba(7,17,27,.07)}
+.password-toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);height:36px;min-width:42px;border:0;background:transparent;color:#47525d;font-size:11px;font-weight:800;text-transform:uppercase;cursor:pointer;border-radius:3px}
+.password-toggle:hover{background:#f3f5f7}
+.form-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:3px 0 22px}
+.remember{display:inline-flex;align-items:center;gap:9px;color:#39434c;font-size:13px;cursor:pointer}
+.remember input{width:16px;height:16px;margin:0;accent-color:var(--red)}
+.login-button{width:100%;height:52px;border:0;border-radius:3px;background:var(--red);color:#fff;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:transform .14s ease,background .14s ease,box-shadow .14s ease;box-shadow:0 10px 24px rgba(227,38,54,.18)}
+.login-button:hover{background:#ca1f2e;transform:translateY(-1px)}
+.login-button:active{transform:translateY(0)}
+.help{margin:24px 0 0;padding-top:22px;border-top:1px solid #eceff2;text-align:center;color:#69727b;font-size:12px;line-height:1.55}
+.help a{color:#18232c;font-weight:800;text-decoration:none}
+.security-note{position:absolute;bottom:19px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.76);font-size:11px;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.45)}
+@media(max-width:600px){
+  .portal-stage{padding:74px 18px 42px;background-position:64% center}
+  .back-link{top:18px;left:19px;font-size:11px}
+  .login-card{padding:34px 26px 30px;border-radius:4px}
+  .login-logo{width:min(240px,84%);margin-bottom:25px}
+  h1{font-size:25px}
+  .security-note{display:none}
+}
+@media(max-height:650px) and (min-width:601px){.portal-stage{padding:22px}.login-card{padding-top:30px;padding-bottom:27px}.login-logo{margin-bottom:21px;width:235px}.login-intro{margin-bottom:20px}.field{margin-bottom:13px}.help{margin-top:17px;padding-top:16px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="portal-stage">
+  <a class="back-link" href="index.html" aria-label="Back to Cartage Australia website">← Main website</a>
+  <section class="login-card" aria-labelledby="portal-title">
+    <img class="login-logo" src="assets/images/logo.png" alt="Cartage Australia"/>
+    <div class="login-kicker">Secure access</div>
+    <h1 id="portal-title">Client Portal</h1>
+    <p class="login-intro">Sign in to access your Cartage Australia client account.</p>
+
+    <form name="login" action="https://portal.cartageaustralia.com/login/" method="post" novalidate="novalidate">
+      <label class="field" for="user_login">
+        <span class="field-label">Email Address</span>
+        <input name="log" type="email" id="user_login" autocomplete="username" autocapitalize="off" spellcheck="false" required/>
+      </label>
+
+      <label class="field" for="user_pass">
+        <span class="field-label">Password</span>
+        <span class="input-wrap">
+          <input name="pwd" type="password" id="user_pass" autocomplete="current-password" required/>
+          <button class="password-toggle" id="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+        </span>
+      </label>
+
+      <div class="form-row">
+        <label class="remember" for="rememberme"><input name="rememberme" type="checkbox" value="forever" id="rememberme"/> Remember me</label>
+      </div>
+
+      <input name="redirect_to" type="hidden" value="https://portal.cartageaustralia.com/wp-admin/"/>
+      <button name="submit" type="submit" class="login-button">Log In</button>
+    </form>
+
+    <p class="help">Having trouble signing in?<br/><a href="mailto:info@cartageaustralia.com">Contact Cartage Australia</a> · <a href="tel:1800366633">1800 366 633</a></p>
+  </section>
+  <div class="security-note">Your login details are submitted directly to the secure Cartage Australia portal.</div>
+</main>
+<script>
+(function(){
+  var input=document.getElementById('user_pass');
+  var button=document.getElementById('password-toggle');
+  if(!input||!button)return;
+  button.addEventListener('click',function(){
+    var showing=input.type==='text';
+    input.type=showing?'password':'text';
+    button.textContent=showing?'Show':'Hide';
+    button.setAttribute('aria-label',showing?'Show password':'Hide password');
+    button.setAttribute('aria-pressed',String(!showing));
+    input.focus();
+  });
+})();
+</script>
+</body>
+</html>

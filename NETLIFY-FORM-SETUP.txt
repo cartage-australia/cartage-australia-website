@@ -1,0 +1,26 @@
+CARTAGE AUSTRALIA - NETLIFY FORM SETUP
+
+CAREERS RESUME FORM
+1. In Netlify, open Project configuration > Forms and ensure Form detection is enabled.
+2. Redeploy this ZIP. Netlify should detect the form named: careers-enquiry
+3. In Forms > Form notifications, add an email notification for careers-enquiry to:
+   careers@cartageaustralia.com
+
+CONTACT PAGE EMAIL ROUTING
+The Contact page continues to open the visitor's email application and routes as follows:
+- Quote / Pricing -> quotes@cartageaustralia.com
+- Careers -> careers@cartageaustralia.com
+- Accounts -> accounts@cartageaustralia.com
+- General Enquiry -> info@cartageaustralia.com
+Material Supply has been removed.
+
+UPLOAD PROTECTION
+- One resume file only
+- PDF, DOC or DOCX only
+- Maximum total Netlify request size: 8 MB
+- Browser-side extension, MIME and file-signature checks
+- Netlify honeypot spam field
+- Netlify/Akismet spam filtering after deployment
+
+IMPORTANT SECURITY NOTE
+File-type validation is not antivirus scanning. Resume uploads contain personal information. Netlify recommends additional security for PII file uploads, including its Very Good Security integration. If malware scanning is required, add a server-side scanning service before staff download uploaded files.

@@ -1,0 +1,1 @@
+Services page added. Navigation updated across all pages. Local references validated: 0 missing. New unique generated service imagery stored in assets/images/services-*.jpg.

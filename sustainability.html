@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="See how Cartage Australia improves transport efficiency through Euro 6 vehicles, higher payloads, smarter routing and modern fleet technology." name="description"/>
+<title>Sustainable Bulk Transport &amp; Lower-Emission Fleet | Cartage Australia</title>
+<style>
+:root {
+  --ink:#111820;
+  --deep:#07110d;
+  --green:#496b3f;
+  --green-dark:#29472a;
+  --green-soft:#eef3ec;
+  --red:#ed1c2e;
+  --cream:#f7f7f3;
+  --line:#dfe4dc;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:min(1400px,calc(100% - 96px));margin:0 auto}
+header{
+  position:absolute;z-index:20;top:0;left:0;right:0;
+  height:78px;background:rgba(5,11,9,.72);border-bottom:1px solid rgba(255,255,255,.13);
+  backdrop-filter:blur(10px)
+}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{height:48px;width:auto;filter:brightness(0) invert(1)}
+.nav-links{display:flex;align-items:center;gap:34px;color:#fff;font-size:14px;font-weight:600}
+.nav-links a{padding:29px 0 24px;opacity:.92;position:relative}
+.nav-links a:hover,.nav-links a.active{opacity:1}
+.nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:9px;height:2px;background:var(--red)}
+.nav-actions{display:flex;align-items:center;gap:27px;color:#fff;font-weight:700}
+.phone{white-space:nowrap}
+.quote{background:var(--red);padding:15px 22px}
+.hero{
+  min-height:505px;position:relative;color:#fff;background:#07110d;overflow:hidden;
+  display:flex;align-items:center;padding-top:78px
+}
+.hero-video{position:absolute;inset:0 0 0 33%;width:67%;height:100%;object-fit:cover;object-position:center center}
+.hero:after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,#07110d 0%,rgba(7,17,13,.97) 25%,rgba(7,17,13,.72) 48%,rgba(7,17,13,.14) 76%),
+  linear-gradient(0deg,rgba(4,10,8,.42),transparent 52%)}
+.hero-content{position:relative;z-index:2;width:min(540px,48%);padding:58px 0 54px}
+.hero h1{margin:0 0 15px;font-size:61px;line-height:.96;letter-spacing:-2px;font-weight:500;text-transform:uppercase}
+.hero p{font-size:17px;line-height:1.55;max-width:500px;margin:0}
+.red-rule{width:70px;height:3px;background:var(--red);margin-top:18px}
+.intro{padding:29px 0 22px}
+.intro .lead{font-size:18px;line-height:1.52;max-width:1100px;margin:0}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr) 1.25fr;gap:0;padding:24px 0 34px}
+.pillar{min-height:145px;padding:0 30px 0 0;display:grid;grid-template-columns:58px 1fr;gap:17px}
+.pillar svg{width:53px;height:53px;stroke:var(--green);fill:none;stroke-width:1.8}
+.pillar h3,.commitment h3{font-size:13px;line-height:1.15;margin:2px 0 7px;text-transform:uppercase}
+.pillar p{font-size:12.6px;line-height:1.45;color:#30383c;margin:0}
+.commitment{border-left:1px solid #9ea7a0;padding-left:32px;display:grid;grid-template-columns:1fr;gap:0}
+.commitment ul{padding:0;margin:9px 0 0;list-style:none}
+.commitment li{font-size:12.5px;margin:8px 0;display:flex;gap:8px;align-items:flex-start}
+.tick{width:12px;height:12px;border:1.5px solid var(--green);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--green);font-size:8px;font-weight:bold;flex:none;margin-top:1px}
+.feature-grid{display:grid;grid-template-columns:1.38fr .92fr;gap:28px;padding-bottom:34px}
+.volvo-card,.benefit-card{min-height:220px;border-radius:5px;overflow:hidden;background:#f1f2ef;position:relative}
+.volvo-card{background:linear-gradient(90deg,#f2f2ef 0 43%,rgba(242,242,239,.35) 60%),url("assets/embedded/1e4926da40c51c95.webp") center 57%/cover no-repeat}
+.card-copy{padding:30px;max-width:42%;position:relative;z-index:2}
+.card-copy h2,.benefit-card h2{font-size:16px;text-transform:uppercase;margin:0 0 15px}
+.card-copy p,.benefit-card p{font-size:13.5px;line-height:1.5;margin:0}
+.benefit-card{padding:30px;background:linear-gradient(130deg,#f0f2ef,#f8faf7)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);margin-top:24px}
+.metric{padding-right:24px}
+.metric+.metric{border-left:1px solid #9ea7a0;padding-left:26px}
+.metric small{display:block;text-transform:uppercase;font-size:11px;font-weight:700;color:var(--green-dark)}
+.metric strong{display:block;font-size:36px;color:var(--green-dark);line-height:1}
+.metric span{font-size:12px;font-weight:700;color:var(--green-dark)}
+.note{font-size:10px!important;margin-top:27px!important}
+.dark-section{background:#0d1d18;color:#fff;padding:80px 0}
+.section-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:45px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9cb191;margin-bottom:12px}
+.section-head h2,.white-section h2{font-size:48px;line-height:1.02;margin:0;text-transform:uppercase;letter-spacing:-1px}
+.section-head p{max-width:520px;color:#c6d0ca;font-size:15px;line-height:1.7;margin:0}
+.capacity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.capacity-card{border:1px solid rgba(255,255,255,.18);padding:30px;min-height:250px;background:rgba(255,255,255,.035)}
+.capacity-number{font-size:50px;font-weight:700;color:#a6ba9c;margin:16px 0 5px}
+.capacity-card h3{font-size:19px;text-transform:uppercase;margin:0 0 12px}
+.capacity-card p{color:#c7d0cb;font-size:14px;line-height:1.65;margin:0}
+.white-section{padding:80px 0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.image-panel{min-height:430px;background:url("assets/images/sustainability-smarter-fleet.webp") center/cover no-repeat;position:relative}
+.image-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,15,10,.3),transparent 55%)}
+.copy p{font-size:16px;line-height:1.75;color:#475057}
+.fact-list{margin-top:27px}
+.fact{display:grid;grid-template-columns:44px 1fr;gap:15px;padding:17px 0;border-top:1px solid var(--line)}
+.fact strong{font-size:14px;text-transform:uppercase}
+.fact p{font-size:13px;line-height:1.55;margin:4px 0 0}
+.fact-icon{width:36px;height:36px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;color:var(--green-dark);font-weight:700}
+.footprint{background:var(--cream);padding:80px 0}
+.map-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:80px;align-items:center}
+.map-card{background:#fff;border:1px solid #dfe4dc;border-radius:8px;padding:22px 24px 18px}.map-kicker{font-size:11px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:#66736b;margin-bottom:4px}.australia-map{width:100%;max-width:620px;margin:0 auto}
+.map-outline{fill:url(#ausFill);stroke:#0f2c20;stroke-width:2;stroke-linejoin:round}
+.location-halo{fill:rgba(237,28,46,.16)}.location-dot{fill:var(--red);stroke:#fff;stroke-width:3}
+.location-label{font-size:15px;font-weight:700;fill:#183629;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.map-note{font-size:10px;color:#7a847f;margin-top:2px}
+.location-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.location{background:#fff;padding:18px 20px;border-left:3px solid var(--green)}
+.location strong{display:block;text-transform:uppercase;font-size:13px}
+.location span{font-size:12px;color:#65706a}
+.cta{background:var(--red);color:#fff;padding:54px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta h2{font-size:38px;text-transform:uppercase;margin:0}
+.cta p{margin:7px 0 0;opacity:.9}
+.cta a{background:#fff;color:#111;padding:16px 24px;font-weight:700}
+footer{background:#06100d;color:#fff;padding:45px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px}
+.footer-logo{height:55px;width:auto;filter:brightness(0) invert(1);margin-bottom:18px}
+footer p,footer a{font-size:13px;color:#b9c4bf;line-height:1.65}
+footer h3{font-size:13px;text-transform:uppercase;margin:0 0 13px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:18px;font-size:11px;color:#84918a}
+@media(max-width:1050px){
+  .nav-links{display:none}.container{width:min(100% - 44px,900px)}
+  .pillars{grid-template-columns:1fr 1fr}.commitment{border-left:0;padding-left:0}
+  .feature-grid,.two-col,.map-layout{grid-template-columns:1fr}
+  .hero-video{left:22%;width:78%}.hero-content{width:62%}
+}
+@media(max-width:700px){
+  header{height:70px}.nav{height:70px}.logo{height:38px}.phone{display:none}.quote{padding:12px 14px;font-size:13px}
+  .container{width:calc(100% - 32px)}.hero{min-height:580px;padding-top:70px;align-items:end}
+  .hero-video{left:0;width:100%;opacity:.82;object-position:58% center}
+  .hero:after{background:linear-gradient(0deg,#07110d 0%,rgba(7,17,13,.83) 52%,rgba(7,17,13,.18) 100%)}
+  .hero-content{width:100%;padding:200px 0 45px}.hero h1{font-size:47px}.hero p{font-size:15px}
+  .pillars{grid-template-columns:1fr}.pillar{padding-right:0}.commitment{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:1fr}.volvo-card{background-position:62% center}.card-copy{max-width:72%;background:rgba(244,245,242,.9);height:100%}
+  .metrics{grid-template-columns:1fr}.metric+.metric{border-left:0;border-top:1px solid #aab2ac;padding:17px 0 0;margin-top:17px}
+  .capacity-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:20px}
+  .section-head h2,.white-section h2{font-size:39px}.image-panel{min-height:320px}
+  .location-list{grid-template-columns:1fr}.cta-inner{display:block}.cta a{display:inline-block;margin-top:22px}
+  .footer-grid{grid-template-columns:1fr}.hero h1{letter-spacing:-1px}
+}
+
+/* Footer social icon sizing - keep consistent with all site pages */
+.footer-social{display:flex;align-items:center;gap:12px;margin-top:18px}
+.footer-social a{display:grid;place-items:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.35);border-radius:50%;color:#fff;transition:background .2s,border-color .2s,transform .2s}
+.footer-social a:hover{background:#ed1c2e;border-color:#ed1c2e;transform:translateY(-2px)}
+.footer-social svg{display:block;width:18px!important;height:18px!important;max-width:18px!important;max-height:18px!important;fill:currentColor;stroke:currentColor;stroke-width:1.8}
+.footer-social svg rect,.footer-social svg circle{fill:none}
+.footer-social svg .fill-dot{fill:currentColor;stroke:none}
+</style>
+<link href="site.webmanifest" rel="manifest"/><link href="assets/images/favicon-c.svg?v=2" rel="icon" type="image/svg+xml"/><link href="favicon.ico?v=2" rel="icon" sizes="any"/><link href="assets/images/favicon-32.png?v=2" rel="icon" sizes="32x32" type="image/png"/><link href="assets/images/apple-touch-icon.png?v=2" rel="apple-touch-icon"/><meta content="#07110e" name="theme-color"/><link href="assets/css/enhancements.css" rel="stylesheet"/><link as_="image" fetchpriority="high" href="assets/images/sustainability-hero-corrected.webp" rel="preload"/><link href="assets/css/performance.css" rel="stylesheet"/><link href="https://www.cartageaustralia.com/sustainability/" rel="canonical"/><meta content="Cartage Australia" property="og:site_name"/><meta content="Sustainable Bulk Transport &amp; Lower-Emission Fleet | Cartage Australia" property="og:title"/><meta content="See how Cartage Australia improves transport efficiency through Euro 6 vehicles, higher payloads, smarter routing and modern fleet technology." property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.cartageaustralia.com/sustainability/" property="og:url"/><meta content="https://www.cartageaustralia.com/assets/images/sustainability-hero-corrected.jpg" property="og:image"/><meta content="en_AU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Sustainable Bulk Transport &amp; Lower-Emission Fleet | Cartage Australia" name="twitter:title"/><meta content="See how Cartage Australia improves transport efficiency through Euro 6 vehicles, higher payloads, smarter routing and modern fleet technology." name="twitter:description"/><meta content="https://www.cartageaustralia.com/assets/images/sustainability-hero-corrected.jpg" name="twitter:image"/><script type="application/ld+json">[{"@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "@id": "https://www.cartageaustralia.com/#organization", "name": "Cartage Australia", "url": "https://www.cartageaustralia.com/", "logo": "https://www.cartageaustralia.com/assets/images/logo.png", "telephone": "1800 366 633", "email": "info@cartageaustralia.com", "areaServed": {"@type": "Country", "name": "Australia"}, "sameAs": ["https://www.facebook.com/Cartageaustralia", "https://www.instagram.com/cartageaustralia/"]}, {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.cartageaustralia.com/sustainability/#webpage", "url": "https://www.cartageaustralia.com/sustainability/", "name": "Sustainable Bulk Transport & Lower-Emission Fleet | Cartage Australia", "description": "See how Cartage Australia improves transport efficiency through Euro 6 vehicles, higher payloads, smarter routing and modern fleet technology.", "isPartOf": {"@id": "https://www.cartageaustralia.com/#website"}, "about": {"@id": "https://www.cartageaustralia.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cartageaustralia.com/"}, {"@type": "ListItem", "position": 2, "name": "Sustainability", "item": "https://www.cartageaustralia.com/sustainability/"}]}]</script><link href="assets/css/header-lock.css?v=1" rel="stylesheet"/></head>
+<body class="page-sustainability"><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header ca-global-header">
+<div class="nav-shell nav">
+<a class="brand" href="index.html"><img alt="Cartage Australia" class="logo" decoding="async" fetchpriority="high" loading="eager" src="assets/images/logo.png"/></a>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="fleet.html">Fleet</a><a class="active" href="sustainability.html">Sustainability</a><a href="safety-compliance.html">Safety &amp; Compliance</a><a href="contact.html">Contact</a></nav>
+<div class="nav-actions">
+<a class="phone header-phone phone-stack" href="tel:1800366633"><span>☎ 1800 366 633</span><small>24/7</small></a>
+<a class="header-action-btn header-quote-btn" href="contact.html">Get a Quote</a>
+<a class="portal-btn header-action-btn" href="client-portal.html">Client Portal</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-btn" type="button"></button>
+</div>
+</div>
+</header>
+<section class="hero">
+<video aria-label="Cartage Australia truck driving through Australian bushland" autoplay="" class="hero-video" loop="" muted="" playsinline="" poster="assets/images/sustainability-video-poster.jpg" preload="auto">
+<source src="assets/videos/sustainability-hero.mp4" type="video/mp4"/>
+</video>
+<div class="container">
+<div class="hero-content">
+<h1>Driving<br/>Sustainability</h1>
+<p>We are committed to minimising our environmental impact and supporting a more sustainable future for our industry, our communities and Australia.</p>
+<div class="red-rule"></div>
+<div aria-label="Australia-wide capability" class="national-capability-note"><strong>Australia-wide capability</strong><span>Metropolitan · Regional · Remote</span></div></div>
+</div>
+</section><h2 class="sr-only">Sustainability priorities</h2>
+<main id="main-content">
+<section class="intro" id="capacity">
+<div class="container">
+<p class="lead">Sustainability is at the core of how we operate. From the equipment we run to the way we plan, move and maintain, we are focused on reducing emissions, improving efficiency and driving positive change.</p>
+<div class="pillars">
+<article class="pillar">
+<svg viewbox="0 0 64 64"><path d="M14 51C12 29 27 12 51 9c-1 24-13 39-36 43"></path><path d="M19 47c8-10 16-19 27-29"></path></svg>
+<div><h3>Higher payloads,<br/>fewer movements</h3><p>Our high-capacity vehicles carry more material per trip, reducing the number of movements on the road, traffic congestion and overall emissions.</p></div>
+</article>
+<article class="pillar">
+<svg viewbox="0 0 64 64"><path d="M17 45h31a10 10 0 0 0 2-20 15 15 0 0 0-28-5A12 12 0 0 0 17 45Z"></path><text style="fill:#496b3f;stroke:none;font-size:13px;font-weight:bold" x="21" y="38">CO₂</text><path d="M31 47v12m-6-6 6 6 6-6"></path></svg>
+<div><h3>Lower emissions<br/>per tonne</h3><p>Moving more with fewer trucks means lower fuel consumption and lower emissions per tonne of material delivered.</p></div>
+</article>
+<article class="pillar">
+<svg viewbox="0 0 64 64"><path d="M8 20h31v25H8zM39 29h10l8 9v7H39z"></path><circle cx="20" cy="48" r="5"></circle><circle cx="49" cy="48" r="5"></circle></svg>
+<div><h3>Modern Euro 6<br/>fleet</h3><p>Our Volvo FM and FMX trucks feature Euro 6 technology, significantly reducing emissions of nitrogen oxides and particulates.</p></div>
+</article>
+<article class="pillar">
+<svg viewbox="0 0 64 64"><path d="M12 45a22 22 0 1 1 40 0"></path><path d="M32 19v6m-13 0 4 5m22-5-4 5M32 41l11-10"></path><path d="M17 46h30"></path></svg>
+<div><h3>Smarter, safer,<br/>greener</h3><p>Through innovation, technology and driver best practice, we are building a cleaner, more sustainable transport operation.</p></div>
+</article>
+<aside class="commitment">
+<div><h3>Our commitment</h3>
+<ul>
+<li><span class="tick">✓</span>Reduce emissions</li>
+<li><span class="tick">✓</span>Improve fuel efficiency</li>
+<li><span class="tick">✓</span>Invest in modern, low-emission vehicles</li>
+<li><span class="tick">✓</span>Promote safe and efficient driving</li>
+<li><span class="tick">✓</span>Support our people and communities</li>
+<li><span class="tick">✓</span>Continuously improve</li>
+</ul>
+</div>
+</aside>
+</div>
+<div class="feature-grid">
+<article class="volvo-card">
+<div class="card-copy">
+<h2>The Volvo Difference</h2>
+<p>Our Volvo FM and FMX Euro 6 trucks are built with advanced technologies that reduce environmental impact while delivering reliable performance on the toughest jobs.</p>
+</div>
+</article>
+<article class="benefit-card">
+<h2>Euro 6 emissions benefits</h2>
+<p>Compared with Euro 5 engines, Volvo Euro 6 technology delivers:</p>
+<div class="metrics">
+<div class="metric"><small>Up to</small><strong>80%</strong><span>less NOx</span></div>
+<div class="metric"><small>Up to</small><strong>50%</strong><span>less particulate matter</span></div>
+<div class="metric"><small>Up to</small><strong>5%</strong><span>better fuel efficiency*</span></div>
+</div>
+<p class="note">*Depending on application and operating conditions.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="dark-section">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">Efficiency through scale</div><h2>More material.<br/>Fewer movements.</h2></div>
+<p>High-productivity combinations allow us to carry more material in each movement. That means fewer trips, less congestion, more efficient project delivery and a lower environmental impact per tonne transported.</p>
+</div>
+<div class="capacity-grid">
+<article class="capacity-card"><div class="eyebrow">High capacity</div><div class="capacity-number">59t</div><h3>A-Double combinations</h3><p>Our highest-capacity combinations maximise payload efficiency on approved routes and large-volume projects.</p></article>
+<article class="capacity-card"><div class="eyebrow">Reduced movements</div><div class="capacity-number">35k+</div><h3>Tonnes moved daily</h3><p>Efficient fleet planning and high-capacity equipment help reduce the number of vehicle movements required.</p></article>
+<article class="capacity-card"><div class="eyebrow">Modern operation</div><div class="capacity-number">18 mo.</div><h3>Average fleet age</h3><p>A younger, predominantly Euro 6 fleet supports lower emissions, improved fuel efficiency and reduced unplanned maintenance compared with older heavy vehicles.</p></article>
+</div>
+</div>
+</section>
+<section class="white-section" id="smarter-operations">
+<div class="container two-col">
+<div class="image-panel"></div>
+<div class="copy">
+<div class="eyebrow">Technology and people</div>
+<h2>Smarter fleet operations</h2>
+<p>Environmental performance extends beyond engine technology. Our operational approach combines modern equipment, preventative maintenance, route planning, driver training and performance monitoring.</p>
+<div class="fact-list">
+<div class="fact"><span class="fact-icon">01</span><div><strong>Route and load optimisation</strong><p>Planning efficient routes and matching equipment to payload requirements reduces unnecessary kilometres and idle time.</p></div></div>
+<div class="fact"><span class="fact-icon">02</span><div><strong>Driver performance</strong><p>Safe, smooth and efficient driving supports lower fuel use, reduced wear and improved whole-of-fleet performance.</p></div></div>
+<div class="fact"><span class="fact-icon">03</span><div><strong>Preventative maintenance</strong><p>Regular maintenance keeps vehicles operating efficiently and helps extend the productive life of our equipment.</p></div></div>
+<div class="fact"><span class="fact-icon">04</span><div><strong>Continuous improvement</strong><p>We review operational data, technology and equipment options to identify practical opportunities for improvement.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="footprint" id="footprint">
+<div class="container map-layout">
+<div class="map-card">
+<div class="map-kicker">Cartage Australia operations</div>
+<svg aria-label="Accurate map of Australia showing Cartage Australia operations in Adelaide, Melbourne, Brisbane and Hervey Bay" class="australia-map" role="img" viewbox="0 0 640 500">
+<defs>
+<lineargradient id="ausFill" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#244f39"></stop>
+<stop offset="100%" stop-color="#102b20"></stop>
+</lineargradient>
+<filter height="140%" id="mapShadow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="10" flood-color="#0b1b13" flood-opacity=".16" stddeviation="12"></fedropshadow>
+</filter>
+</defs>
+<path class="map-outline" d="M 480.0 427.3 L 487.8 428.2 L 488.7 443.6 L 484.2 448.1 L 482.9 458.5 L 478.3 455.0 L 469.3 464.0 L 466.6 463.3 L 458.7 462.9 L 450.7 451.8 L 448.9 443.2 L 441.4 431.9 L 441.7 426.0 L 450.2 427.1 L 462.8 431.6 L 469.8 429.8 L 480.0 427.3 Z M 200.3 315.8 L 186.5 322.4 L 175.3 325.4 L 172.8 332.2 L 168.0 337.5 L 157.0 337.8 L 148.8 339.0 L 137.3 336.6 L 128.0 338.0 L 119.1 338.6 L 111.4 345.5 L 107.6 344.9 L 101.1 348.6 L 94.8 352.7 L 85.4 352.2 L 76.7 352.2 L 62.9 343.9 L 55.9 341.5 L 56.2 334.0 L 62.6 332.3 L 64.8 329.3 L 64.4 324.6 L 66.0 315.6 L 64.5 307.9 L 57.7 294.8 L 55.5 287.4 L 56.1 280.0 L 50.9 271.5 L 50.6 267.7 L 44.8 262.6 L 43.2 252.4 L 35.8 242.1 L 34.0 236.6 L 39.7 242.2 L 35.3 230.1 L 41.8 233.9 L 45.6 238.9 L 45.4 232.3 L 39.0 222.1 L 37.7 218.0 L 34.7 214.1 L 36.1 206.6 L 38.8 203.4 L 40.5 196.9 L 39.2 189.3 L 44.5 180.0 L 45.5 189.8 L 51.0 180.9 L 61.5 176.6 L 67.9 171.0 L 77.8 166.3 L 83.7 165.3 L 87.3 166.9 L 97.5 162.0 L 105.4 160.6 L 107.3 157.7 L 110.8 156.5 L 118.0 156.8 L 131.6 153.0 L 138.7 147.3 L 142.0 140.3 L 149.6 133.8 L 150.2 128.6 L 150.5 121.5 L 159.6 110.5 L 165.1 121.7 L 170.6 119.1 L 166.0 113.0 L 170.0 106.7 L 175.8 109.5 L 177.3 99.6 L 184.4 93.2 L 187.6 88.1 L 194.1 85.9 L 194.3 82.3 L 200.0 83.8 L 200.2 80.5 L 205.9 78.6 L 212.2 76.9 L 221.8 82.9 L 229.0 90.5 L 237.1 90.6 L 245.4 91.8 L 242.6 84.7 L 248.9 74.3 L 254.7 70.9 L 252.7 67.7 L 258.3 60.3 L 266.2 55.7 L 272.8 57.2 L 283.7 54.8 L 283.5 48.1 L 274.0 43.9 L 280.9 42.0 L 289.5 45.2 L 296.4 50.5 L 307.3 53.8 L 311.1 52.5 L 319.1 56.5 L 326.7 52.8 L 331.6 53.9 L 334.6 51.4 L 340.6 57.9 L 337.1 64.8 L 332.2 70.1 L 327.7 70.5 L 329.2 75.7 L 325.4 82.2 L 320.8 88.5 L 321.7 92.2 L 332.0 99.4 L 342.0 103.5 L 348.7 108.0 L 358.1 115.7 L 361.8 115.7 L 368.6 119.0 L 370.5 123.0 L 382.9 127.4 L 391.5 123.0 L 394.0 116.0 L 396.7 110.3 L 398.3 103.2 L 402.2 92.8 L 400.4 86.5 L 401.4 82.8 L 399.9 75.3 L 401.6 65.6 L 404.1 62.9 L 402.0 58.6 L 405.2 51.7 L 407.6 44.6 L 408.0 40.9 L 412.8 36.0 L 416.5 42.4 L 417.4 50.5 L 420.6 52.1 L 421.1 57.5 L 425.9 64.1 L 426.8 71.5 L 426.4 76.2 L 431.1 86.4 L 439.4 81.5 L 443.7 87.0 L 449.9 92.0 L 448.6 97.8 L 451.4 108.9 L 453.3 115.4 L 456.6 117.0 L 460.1 128.1 L 458.9 134.8 L 463.1 143.6 L 477.1 150.4 L 486.3 156.6 L 495.0 162.2 L 493.3 165.4 L 500.7 173.5 L 505.8 187.6 L 511.0 184.7 L 516.2 190.3 L 519.4 188.3 L 521.6 202.1 L 530.9 210.1 L 536.9 215.0 L 547.0 225.5 L 550.7 236.0 L 551.0 243.4 L 550.1 251.4 L 556.3 262.4 L 555.6 273.9 L 553.3 279.9 L 549.8 291.5 L 550.1 299.0 L 547.5 308.3 L 541.8 320.1 L 532.2 326.5 L 527.4 336.5 L 523.1 342.9 L 519.2 354.1 L 514.2 360.6 L 510.9 370.3 L 509.3 379.3 L 509.9 383.4 L 502.5 387.9 L 488.0 388.4 L 476.0 393.7 L 470.0 398.7 L 462.2 404.3 L 451.4 398.6 L 443.5 396.3 L 445.5 389.5 L 438.4 392.0 L 427.0 401.4 L 415.8 397.8 L 408.4 395.8 L 401.0 394.9 L 388.4 391.1 L 380.0 383.1 L 377.6 373.2 L 374.6 366.7 L 368.2 361.4 L 355.7 359.8 L 360.0 353.6 L 356.9 343.9 L 350.5 352.9 L 339.0 355.3 L 345.8 348.1 L 347.7 340.6 L 352.7 334.2 L 351.7 324.6 L 341.1 335.7 L 333.0 340.1 L 328.1 350.5 L 317.9 345.1 L 318.3 338.2 L 310.2 328.8 L 303.4 324.0 L 305.8 321.0 L 289.1 313.1 L 280.0 312.7 L 267.5 306.4 L 244.3 307.6 L 227.5 312.3 L 212.7 316.6 L 200.3 315.8 Z" filter="url(#mapShadow)"></path>
+<g class="map-marker"><circle class="location-halo" cx="549.3" cy="212.0" r="15"></circle><circle class="location-dot" cx="549.3" cy="212.0" r="7"></circle><text class="location-label" text-anchor="end" x="532.3" y="199.0">Hervey Bay</text></g><g class="map-marker"><circle class="location-halo" cx="549.3" cy="254.1" r="15"></circle><circle class="location-dot" cx="549.3" cy="254.1" r="7"></circle><text class="location-label" text-anchor="start" x="567.3" y="279.1">Brisbane</text></g><g class="map-marker"><circle class="location-halo" cx="444.5" cy="388.4" r="15"></circle><circle class="location-dot" cx="444.5" cy="388.4" r="7"></circle><text class="location-label" text-anchor="start" x="462.5" y="397.4">Melbourne</text></g><g class="map-marker"><circle class="location-halo" cx="362.0" cy="351.0" r="15"></circle><circle class="location-dot" cx="362.0" cy="351.0" r="7"></circle><text class="location-label" text-anchor="end" x="344.0" y="358.0">Adelaide</text></g>
+</svg>
+<div class="map-note">Operating locations shown are indicative.</div>
+</div>
+<div class="copy">
+<div class="eyebrow">Our operating footprint</div>
+<h2>Local teams.<br/>National capability.</h2>
+<p>Our expanding operating footprint allows us to support customers with locally managed fleets while coordinating equipment and capability across multiple states.</p>
+<div class="location-list">
+<div class="location"><strong>Melbourne</strong><span>Victorian operations</span></div>
+<div class="location"><strong>Brisbane</strong><span>Queensland operations</span></div>
+<div class="location"><strong>Hervey Bay</strong><span>Regional fleet support</span></div>
+<div class="location"><strong>Adelaide</strong><span>South Australian operations</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="container cta-inner">
+<div><h2>Move more efficiently with Cartage Australia</h2><p>Speak with our team about high-capacity transport solutions for your next project.</p></div>
+<a href="mailto:quotes@cartageaustralia.com">Request a Quote</a>
+</div>
+</section>
+<section class="site-cta"><div class="container site-cta-inner"><div><h2>Australia-wide capability. One reliable partner.</h2><p>Speak with Cartage Australia about bulk transport, material supply, dedicated fleet support or major project requirements anywhere in Australia.</p></div><div class="site-cta-actions"><a href="contact.html?type=Quote">Request a Quote</a><a href="tel:1800366633">Call 1800 366 633</a></div></div></section></main>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div><img alt="Cartage Australia" class="footer-logo" decoding="async" fetchpriority="high" loading="eager" src="assets/embedded/5eb1602f1a103f19.webp"/><p>Reliable bulk transport, material supply and fleet solutions across Australia.</p><div aria-label="Social media links" class="footer-social">
+<a aria-label="Cartage Australia on Facebook" href="https://www.facebook.com/Cartageaustralia" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v9h4v-9h3.2l.8-4H13V9c0-.7.3-1 1-1Z"></path></svg></a>
+<a aria-label="Cartage Australia on Instagram" href="https://www.instagram.com/cartageaustralia/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4.2"></circle><circle class="fill-dot" cx="17.5" cy="6.5" r="1"></circle></svg></a>
+</div></div>
+<div><h3>Contact</h3><p><a href="tel:1800366633">1800 366 633</a><br/><a href="mailto:quotes@cartageaustralia.com">quotes@cartageaustralia.com</a><br/><a href="careers.html">careers@cartageaustralia.com</a></p></div>
+<div><h3>Explore</h3><p><a href="index.html">Home</a><br/><a href="services.html">Services</a><br/><a href="fleet.html">Fleet</a><br/><a href="sustainability.html">Sustainability</a><a href="safety-compliance.html">Safety &amp; Compliance</a><br/><a href="contact.html">Contact</a><br/><a href="careers.html">Careers</a></p></div>
+</div>
+<div class="footer-bottom">© 2026 Cartage Australia Pty Ltd. All rights reserved.</div>
+</div>
+</footer>
+<div aria-hidden="false" class="quote-modal"><div class="quote-modal-backdrop" data-close-quote=""></div><section aria-labelledby="quote-title" aria-modal="true" class="quote-dialog" role="dialog"><button aria-label="Close quote form" class="quote-close" data-close-quote="" type="button">×</button><h2 id="quote-title">Request a Quote</h2><p>Tell us about the work and your email app will open with the completed enquiry.</p><form class="quote-form"><label>Name<input autocomplete="name" name="name" required=""/></label><label>Company<input autocomplete="organization" name="company"/></label><label>Phone<input autocomplete="tel" name="phone" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Project location<input name="projectLocation" required=""/></label><label>Material type<select name="material"><option>Aggregates</option><option>Sand</option><option>Top soil</option><option>Crushed rock</option><option>Recycled products</option><option>Other / mixed materials</option></select></label><label>Estimated quantity<input name="quantity" placeholder="Tonnes or loads"/></label><label>Required dates<input name="dates" placeholder="Start date or date range"/></label><label class="full">Work type<select name="workType"><option>One-off movement</option><option>Ongoing supply</option><option>Dedicated project fleet</option><option>Pricing / tender enquiry</option></select></label><label class="full">Project details<textarea name="details" required=""></textarea></label><button class="quote-submit" type="submit">Prepare Email Enquiry</button><p class="quote-note">This form does not upload or store information. It prepares an email to quotes@cartageaustralia.com.</p></form></section></div><div aria-hidden="true" class="page-transition"></div><div class="mobile-action-bar"><a href="tel:1800366633">Call 1800 366 633</a><button class="js-quote" type="button">Get a Quote</button></div><script defer="True" src="assets/js/main.js"></script><button aria-label="Back to top" class="back-to-top" title="Back to top" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"></path></svg></button></body>
+</html>

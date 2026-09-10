@@ -1,0 +1,12 @@
+Safety & Compliance image update
+
+Only safety-compliance.html and the seven listed image assets were changed.
+- PBS-approved high-capacity truck combination: assets/images/safety-pbs-hyperreal.jpg
+- Professional heavy vehicle driver operating safely: assets/images/safety-fatigue-hyperreal.jpg
+- Heavy vehicle maintenance inspection: assets/images/safety-vehicle-compliance-hyperreal.jpg
+- Transport team participating in a safety briefing: assets/images/safety-culture-hyperreal.jpg
+- Driver safety training session: assets/images/safety-training-competency-hyperreal.jpg
+- Transport telematics and fleet monitoring systems: assets/images/safety-monitoring-reporting-hyperreal.jpg
+- Incident scene with warning triangle and traffic controls: assets/images/safety-management-system-hyperreal.jpg
+
+Validation: all local HTML/CSS references resolve.
